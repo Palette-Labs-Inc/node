@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import { BroadcastDto } from './dto/broadcast.dto';
-import { Wave, WaveType } from '../interfaces/protocol.interface'
+import { HandleTrackDto } from './dto/handleTrack.dto';
+import { Wave, WaveType } from '../interfaces/protocol.interface';
 
 @Injectable()
-export class BroadcastService {
-  async protocolHandler(dto: BroadcastDto): Promise<Wave> {
+export class HandleTrackService {
+  async protocolHandler(dto: HandleTrackDto): Promise<Wave> {
     // declare any logic to define whether the acknowledgment of the API call should be processed or not. This will determine if the Wave is AFF or NEG
 
     this.handleProtocolRequest(dto);
@@ -15,8 +15,7 @@ export class BroadcastService {
     return wave;
   }
 
-  async handleProtocolRequest(dto: BroadcastDto) {
-    console.log(dto.condition);
-    console.log(dto.search);
+  async handleProtocolRequest(dto: HandleTrackDto) {
+    console.log(dto);
   }
 }

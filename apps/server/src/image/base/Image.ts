@@ -17,7 +17,7 @@ class Image {
   @Field(() => Date)
   createdAt!: Date;
 
-  @ApiProperty({
+  @ApiProperty({ 
     required: true,
     type: String,
   })

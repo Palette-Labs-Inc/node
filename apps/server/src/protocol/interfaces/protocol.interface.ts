@@ -1,18 +1,36 @@
 export enum MethodType {
-    Search = 'search',
-    Select = 'select',
-    Create = 'create',
-    Update = 'update',
-    Status = 'status',
-    Track = 'track',
-    Cancel = 'cancel',
-    Rating = 'rating',
-    Support = 'support',
-  }
-  
-  export interface Protocol {
-    method: MethodType;
-  }
+  //Explore methods
+  Broadcast = 'broadcast',
+  HandleBroadcast = 'handleBroadcast',
+
+  Create = 'create',
+  HandleCreate = 'handleCreate',
+
+  //Purchase methods
+  Submit = 'submit',
+  HandleSubmit = 'handleSubmit',
+
+  //Fulfill methods
+  Status = 'status',
+  HandleStatus = 'handleStatus',
+
+  Track = 'track',
+  HandleTrack = 'handleTrack',
+
+  Update = 'update',
+  HandleUpdate = 'handleUpdate',
+
+  Cancel = 'cancel',
+  HandleCancel = 'handleCancel',
+
+  //Post-Fulfill methods
+  Rating = 'rating',
+  HandleRating = 'handleRating',
+
+  Support = 'support',
+  HandleSupport = 'handleSupport',
+}
+
   
   export enum WaveType {
     AFF = 'affirmative',
@@ -23,3 +41,11 @@ export enum MethodType {
     status: WaveType;
   }
   
+  export class Method {
+    method!: MethodType;
+  }
+
+  export class Error{
+    code!: String
+    message!: String
+  }
