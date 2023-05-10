@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { HandleBroadcastDto } from './dto/handleBroadcast.dto';
-import { Wave, WaveType } from '../interfaces/wave.interface';
+import { Wave, WaveType } from '../interfaces/protocol.interface';
 
 @Injectable()
 export class HandleBroadcastService {
