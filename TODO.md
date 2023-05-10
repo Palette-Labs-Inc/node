@@ -36,6 +36,10 @@
 - create methods or services that create the Condition that is sent over the protocol based on .env + configuration 
 - write logic to handle server to server requests
 - add logic for all json values
+- create a client side sdk for the node
+- define standard format for callback urls
+- create server to server invoicing mechanism
+- create concept of search middleware, similar to google ads search, but for nodes to broadcast searches. 
 
 ## admin
 - adopt Roles for api access for each of buyer, seller, courier, admin
