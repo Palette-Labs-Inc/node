@@ -1,0 +1,649 @@
+datasource postgres {
+  provider = "postgresql"
+  url      = env("DB_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  courier                   Courier?
+  createdAt                 DateTime                   @default(now())
+  fulfillmentSpecifications FulfillmentSpecification[]
+  id                        String                     @id @default(cuid())
+  individual                Individual?
+  password                  String
+  paymentSources            PaymentSource[]
+  roles                     Json
+  seller                    Seller?
+  updatedAt                 DateTime                   @updatedAt
+  username                  String                     @unique
+}
+
+model Image {
+  createdAt     DateTime    @default(now())
+  height        String
+  id            String      @id @default(cuid())
+  individuals   Individual? @relation(fields: [individualsId], references: [id])
+  individualsId String?
+  menuItem      MenuItem?   @relation(fields: [menuItemId], references: [id])
+  menuItemId    String?
+  rating        Rating?     @relation(fields: [ratingId], references: [id])
+  ratingId      String?
+  updatedAt     DateTime    @updatedAt
+  url           String
+  width         String
+}
+
+model MediaFile {
+  createdAt   DateTime  @default(now())
+  id          String    @id @default(cuid())
+  menuItems   MenuItem? @relation(fields: [menuItemsId], references: [id])
+  menuItemsId String?
+  mimeType    String
+  rating      Rating?   @relation(fields: [ratingId], references: [id])
+  ratingId    String?
+  updatedAt   DateTime  @updatedAt
+  url         String
+}
+
+model Individual {
+  contact     Contact?              @relation(fields: [contactId], references: [id])
+  contactId   String?
+  couriers    Courier?              @relation(fields: [couriersId], references: [id])
+  couriersId  String?               @unique
+  createdAt   DateTime              @default(now())
+  dateOfBirth DateTime?
+  firstName   String
+  gender      EnumIndividualGender?
+  id          String                @id @default(cuid())
+  image       Image[]
+  lastName    String
+  middleName  String?
+  updatedAt   DateTime              @updatedAt
+  username    String
+  users       User?                 @relation(fields: [usersId], references: [id])
+  usersId     String?               @unique
+  waypoints   Waypoint[]
+}
+
+model Contact {
+  createdAt                 DateTime                   @default(now())
+  email                     String
+  fulfillmentSpecifications FulfillmentSpecification[]
+  id                        String                     @id @default(cuid())
+  individuals               Individual[]
+  organizations             Organization[]
+  phone                     String
+  updatedAt                 DateTime                   @updatedAt
+  waypoints                 Waypoint[]
+}
+
+model PaymentSource {
+  addressCity     String
+  addressCountry  String
+  addressLine_1   String
+  addressLine_2   String
+  addressState    String
+  addressZip      String
+  cardNumber      String
+  createdAt       DateTime      @default(now())
+  currencyCode    String        @unique
+  cvc             Int
+  expirationMonth Int
+  expirationYear  Int
+  id              String        @id @default(cuid())
+  name            String
+  payments        PaymentTerm[]
+  updatedAt       DateTime      @updatedAt
+  users           User?         @relation(fields: [usersId], references: [id])
+  usersId         String?
+}
+
+model Scalar {
+  classification                        EnumScalarClassification
+  computedValue                         Float?
+  estimatedValue                        Float?
+  id                                    String                   @id @default(cuid())
+  itemQuantityAllocatedMeasure          ItemQuantity[]           @relation(name: "allocatedMeasure")
+  itemQuantityAvailableMeasure          ItemQuantity[]           @relation(name: "availableMeasure")
+  itemQuantityMaximumPurchasableMeasure ItemQuantity[]           @relation(name: "itemQuantityMaximumPurchasableMeasure")
+  itemQuantityMinimumPurchasableMeasure ItemQuantity[]           @relation(name: "itemQuantityMinimumPurchasableMeasure")
+  itemQuantitySelectedMeasure           ItemQuantity[]           @relation(name: "itemQuantitySelectedMeasure")
+  range                                 Json?
+  unit                                  String
+  value                                 Float
+}
+
+model Location {
+  address         String
+  areaCode        String
+  city            String
+  conditions      Condition[]
+  coordinate      String
+  country         String
+  createdAt       DateTime      @default(now())
+  id              String        @id @default(cuid())
+  mapUrl          String?
+  node            Node?         @relation(fields: [nodeId], references: [id])
+  nodeId          Int?
+  organizations   Organization? @relation(fields: [organizationsId], references: [id])
+  organizationsId String?
+  promotion       Promotion[]
+  radius          Int?
+  seller          Seller?       @relation(fields: [sellerId], references: [id])
+  sellerId        String?
+  state           String
+  trackings       Tracking?     @relation(fields: [trackingsId], references: [id])
+  trackingsId     String?       @unique
+  updatedAt       DateTime      @updatedAt
+  waypoints       Waypoint?     @relation(fields: [waypointsId], references: [id])
+  waypointsId     String?       @unique
+}
+
+model Seller {
+  bazaar                    Bazaar[]
+  categories                Category[]
+  createdAt                 DateTime                   @default(now())
+  fulfillmentSpecifications FulfillmentSpecification[]
+  holidays                  Json?
+  id                        String                     @id @default(cuid())
+  isRateable                Boolean
+  locations                 Location[]
+  menuItems                 MenuItem[]
+  menus                     Menu[]
+  modifierGroups            ModifierGroup[]
+  password                  String?
+  paymentTerm               PaymentTerm?
+  promotions                Promotion[]
+  rating                    Float?
+  ratings                   Rating[]
+  search                    Search?                    @relation(fields: [searchId], references: [id])
+  searchId                  String?
+  sellerClassificationId    String?
+  updatedAt                 DateTime                   @updatedAt
+  users                     User                       @relation(fields: [usersId], references: [id])
+  usersId                   String                     @unique
+}
+
+model PaymentTerm {
+  bazaar              Bazaar?                            @relation(fields: [bazaarId], references: [id])
+  bazaarId            String?                            @unique
+  collectedBy         EnumPaymentTermCollectedBy
+  createdAt           DateTime                           @default(now())
+  id                  String                             @id @default(cuid())
+  lifecycleProcessing EnumPaymentTermLifecycleProcessing
+  order               Order?                             @relation(fields: [orderId], references: [id])
+  orderId             String?                            @unique
+  paymentAmount       Int?
+  paymentSource       PaymentSource?                     @relation(fields: [paymentSourceId], references: [id])
+  paymentSourceId     String?
+  search              Search?                            @relation(fields: [searchId], references: [id])
+  searchId            String?                            @unique
+  seller              Seller?                            @relation(fields: [sellerId], references: [id])
+  sellerId            String?                            @unique
+  status              EnumPaymentTermStatus
+  updatedAt           DateTime                           @updatedAt
+}
+
+model Promotion {
+  amount          Float?
+  bazaar          Bazaar?    @relation(fields: [bazaarId], references: [id])
+  bazaarId        String?
+  createdAt       DateTime   @default(now())
+  expirationDate  DateTime?
+  id              String     @id @default(cuid())
+  locations       Location[]
+  maximumPurchase Float?
+  minimumPurchase Float
+  name            String
+  orders          Order[]
+  percentage      Float?
+  search          Search?    @relation(fields: [searchId], references: [id])
+  searchId        String?
+  seller          Seller?    @relation(fields: [sellerId], references: [id])
+  sellerId        String?
+  updatedAt       DateTime   @updatedAt
+}
+
+model ModifierGroup {
+  createdAt                           DateTime @default(now())
+  id                                  String   @id @default(cuid())
+  maximumPerModifierSelectionQuantity Int
+  maximumSelections                   Int
+  menuItemIDs                         Json
+  minimumSelections                   Int
+  sellerModifierGroups                Seller?  @relation(fields: [sellerModifierGroupsId], references: [id])
+  sellerModifierGroupsId              String?
+  updatedAt                           DateTime @updatedAt
+}
+
+model ItemQuantity {
+  allocatedCount              Int
+  allocatedMeasure            Scalar    @relation(name: "allocatedMeasure", fields: [allocatedMeasureId], references: [id])
+  allocatedMeasureId          String
+  availableCount              Int
+  availableMeasure            Scalar    @relation(name: "availableMeasure", fields: [availableMeasureId], references: [id])
+  availableMeasureId          String
+  id                          String    @id @default(cuid())
+  maximumPurchasableCount     Int
+  maximumPurchasableMeasure   Scalar    @relation(name: "itemQuantityMaximumPurchasableMeasure", fields: [maximumPurchasableMeasureId], references: [id])
+  maximumPurchasableMeasureId String
+  menuItem                    MenuItem? @relation(fields: [menuItemId], references: [id])
+  menuItemId                  String?   @unique
+  minimumPurchasableCount     Int
+  minimumPurchasableMeasure   Scalar?   @relation(name: "itemQuantityMinimumPurchasableMeasure", fields: [minimumPurchasableMeasureId], references: [id])
+  minimumPurchasableMeasureId String?
+  selectedCount               Int?
+  selectedMeasure             Scalar?   @relation(name: "itemQuantitySelectedMeasure", fields: [selectedMeasureId], references: [id])
+  selectedMeasureId           String?
+}
+
+model Organization {
+  address   String
+  billings  Billing[]
+  contact   Contact[]
+  couriers  Courier[]
+  createdAt DateTime   @default(now())
+  id        String     @id @default(cuid())
+  location  Location[]
+  menuItems MenuItem[]
+  updatedAt DateTime   @updatedAt
+}
+
+model Vehicle {
+  capacity                  Int?
+  category                  String?
+  code                      String?
+  color                     String?
+  createdAt                 DateTime                   @default(now())
+  fulfillmentSpecifications FulfillmentSpecification[]
+  id                        String                     @id @default(cuid())
+  make                      String?
+  model                     String?
+  registration              String?
+  size                      String?
+  updatedAt                 DateTime                   @updatedAt
+  volume                    String?
+  wheelsCount               Int?
+}
+
+model Rating {
+  courier   Courier?         @relation(fields: [courierId], references: [id])
+  courierId String?
+  createdAt DateTime         @default(now())
+  entity    EnumRatingEntity
+  entityId  String
+  id        String           @id @default(cuid())
+  images    Image[]
+  media     MediaFile[]
+  seller    Seller?          @relation(fields: [sellerId], references: [id])
+  sellerId  String?
+  updatedAt DateTime         @updatedAt
+  value     Float
+}
+
+model Tracking {
+  createdAt                   DateTime                  @default(now())
+  fulfillmentSpecifications   FulfillmentSpecification? @relation(fields: [fulfillmentSpecificationsId], references: [id])
+  fulfillmentSpecificationsId String?                   @unique
+  id                          String                    @id @default(cuid())
+  location                    Location?
+  status                      EnumTrackingStatus
+  trackingUrl                 String
+  updatedAt                   DateTime                  @updatedAt
+}
+
+model Billing {
+  address        String
+  city           String
+  country        String
+  createdAt      DateTime     @default(now())
+  email          String
+  id             String       @id @default(cuid())
+  name           String
+  orders         Order[]
+  organization   Organization @relation(fields: [organizationId], references: [id])
+  organizationId String
+  phone          String
+  state          String
+  taxId          String
+  updatedAt      DateTime     @updatedAt
+}
+
+model Courier {
+  createdAt                 DateTime                   @default(now())
+  fulfillmentSpecifications FulfillmentSpecification[]
+  id                        String                     @id @default(cuid())
+  inidividual               Individual?
+  organization              Organization[]
+  rating                    Float?
+  ratings                   Rating[]
+  updatedAt                 DateTime                   @updatedAt
+  users                     User                       @relation(fields: [usersId], references: [id])
+  usersId                   String                     @unique
+}
+
+model Waypoint {
+  contact                    Contact?                  @relation(fields: [contactId], references: [id])
+  contactId                  String?
+  createdAt                  DateTime                  @default(now())
+  fulfillmentSpecification   FulfillmentSpecification? @relation(fields: [fulfillmentSpecificationId], references: [id])
+  fulfillmentSpecificationId String?
+  id                         String                    @id @default(cuid())
+  individual                 Individual[]
+  location                   Location?
+  updatedAt                  DateTime                  @updatedAt
+  waypointCode               String
+}
+
+model Cancellation {
+  cancelledBy      EnumCancellationCancelledBy
+  createdAt        DateTime                    @default(now())
+  id               String                      @id @default(cuid())
+  isReasonRequired Boolean
+  order            Order?                      @relation(fields: [orderId], references: [id])
+  orderId          String?                     @unique
+  reason           String
+  updatedAt        DateTime                    @updatedAt
+}
+
+model Quote {
+  createdAt    DateTime   @default(now())
+  currencyCode String
+  id           String     @id @default(cuid())
+  menuItems    MenuItem[]
+  timeToLive   Int
+  totalPrice   Float
+  updatedAt    DateTime   @updatedAt
+}
+
+model FulfillmentSpecification {
+  buyer            User                                         @relation(fields: [buyerId], references: [id])
+  buyerId          String
+  contact          Contact                                      @relation(fields: [contactId], references: [id])
+  contactId        String
+  courier          Courier?                                     @relation(fields: [courierId], references: [id])
+  courierId        String?
+  createdAt        DateTime                                     @default(now())
+  fulfillmentModes EnumFulfillmentSpecificationFulfillmentModes
+  id               String                                       @id @default(cuid())
+  isRateable       Boolean
+  orders           Order[]
+  rating           Float?
+  searches         Search[]
+  seller           Seller                                       @relation(fields: [sellerId], references: [id])
+  sellerId         String
+  status           EnumFulfillmentSpecificationStatus?
+  tracking         Tracking?
+  updatedAt        DateTime                                     @updatedAt
+  updatedBy        String
+  vehicle          Vehicle?                                     @relation(fields: [vehicleId], references: [id])
+  vehicleId        String?
+  waypoints        Waypoint[]
+}
+
+model MenuItem {
+  createdAt                  DateTime                       @default(now())
+  currencyCode               String
+  fulfillmentModes           EnumMenuItemFulfillmentModes[]
+  id                         String                         @id @default(cuid())
+  images                     Image[]
+  isRateable                 Boolean
+  locationIDs                Json?
+  mediaFile                  MediaFile[]
+  menuItemsSelectedModifiers MenuItem[]                     @relation(name: "menuItemsSelectedModifiers")
+  modifierGroupIDs           Json?
+  orders                     Order[]
+  organization               Organization[]
+  paymentModes               Json
+  price                      Float
+  quantity                   ItemQuantity?
+  quotes                     Quote[]
+  rating                     Float?
+  searches                   Search[]
+  selectedModifiers          MenuItem[]                     @relation(name: "menuItemsSelectedModifiers")
+  sellers                    Seller?                        @relation(fields: [sellersId], references: [id])
+  sellersId                  String?
+  timeToLive                 DateTime
+  updatedAt                  DateTime                       @updatedAt
+}
+
+model Category {
+  createdAt   DateTime @default(now())
+  id          String   @id @default(cuid())
+  menuItemIDs Json
+  seller      Seller?  @relation(fields: [sellerId], references: [id])
+  sellerId    String?
+  timeToLive  DateTime
+  updatedAt   DateTime @updatedAt
+}
+
+model Menu {
+  categoryIDs      Json
+  createdAt        DateTime                   @default(now())
+  fulfillmentModes EnumMenuFulfillmentModes[]
+  hourIntervals    HourInterval[]
+  id               String                     @id @default(cuid())
+  name             String
+  seller           Seller                     @relation(fields: [sellerId], references: [id])
+  sellerId         String
+  updatedAt        DateTime                   @updatedAt
+}
+
+model Bazaar {
+  createdAt        DateTime                     @default(now())
+  fulfillmentModes EnumBazaarFulfillmentModes[]
+  id               String                       @id @default(cuid())
+  paymentTerms     PaymentTerm?
+  promotions       Promotion[]
+  sellers          Seller[]
+  timeToLive       Int
+  updatedAt        DateTime                     @updatedAt
+}
+
+model Support {
+  createdAt DateTime @default(now())
+  email     String
+  id        String   @id @default(cuid())
+  phone     String
+  updatedAt DateTime @updatedAt
+  url       String
+}
+
+model Order {
+  billing                    Billing                  @relation(fields: [billingId], references: [id])
+  billingId                  String
+  cancellation               Cancellation?
+  createdAt                  DateTime                 @default(now())
+  fulfillmentSpecification   FulfillmentSpecification @relation(fields: [fulfillmentSpecificationId], references: [id])
+  fulfillmentSpecificationId String
+  id                         String                   @id @default(cuid())
+  menuItems                  MenuItem[]
+  paymentTerm                PaymentTerm?
+  promotion                  Promotion[]
+  referenceOrderIds          String?
+  status                     EnumOrderStatus
+  updatedAt                  DateTime                 @updatedAt
+}
+
+model Node {
+  createdAt    DateTime             @default(now())
+  hostUrl      String
+  id           Int                  @id @default(autoincrement())
+  industryCode EnumNodeIndustryCode
+  location     Location[]
+  operatorType EnumNodeOperatorType
+  updatedAt    DateTime             @updatedAt
+}
+
+model Condition {
+  bsnId         String
+  bsnUrl        String
+  createdAt     DateTime @default(now())
+  csnId         String?
+  csnUrl        String?
+  id            String   @id @default(cuid())
+  industryCode  String
+  location      Location @relation(fields: [locationId], references: [id])
+  locationId    String
+  messageId     String
+  method        String
+  publicKey     String
+  ssnId         String
+  ssnUrl        String
+  timeToLive    String
+  transactionId String
+  updatedAt     DateTime @updatedAt
+}
+
+model Search {
+  createdAt                  DateTime                  @default(now())
+  fulfillmentSpecification   FulfillmentSpecification? @relation(fields: [fulfillmentSpecificationId], references: [id])
+  fulfillmentSpecificationId String?
+  id                         String                    @id @default(cuid())
+  menuItems                  MenuItem?                 @relation(fields: [menuItemsId], references: [id])
+  menuItemsId                String?
+  paymentTerm                PaymentTerm?
+  promotions                 Promotion[]
+  sellers                    Seller[]
+  updatedAt                  DateTime                  @updatedAt
+}
+
+model HourInterval {
+  createdAt  DateTime               @default(now())
+  days       EnumHourIntervalDays[]
+  fromHour   Int
+  fromMinute Int
+  id         String                 @id @default(cuid())
+  menus      Menu?                  @relation(fields: [menusId], references: [id])
+  menusId    String?
+  toHour     Int
+  toMinute   Int
+  updatedAt  DateTime               @updatedAt
+}
+
+enum EnumIndividualGender {
+  Male
+  Female
+  Na
+}
+
+enum EnumScalarClassification {
+  Constant
+  Variable
+}
+
+enum EnumPaymentTermCollectedBy {
+  SSN
+  BSN
+  CSN
+}
+
+enum EnumPaymentTermLifecycleProcessing {
+  PreOrder
+  PreFulfillment
+  OnFulfillment
+  PostFulfillment
+}
+
+enum EnumPaymentTermStatus {
+  Processed
+  Collectable
+}
+
+enum EnumRatingEntity {
+  Item
+  Order
+  Fulfillment
+  Seller
+  Courier
+  Support
+}
+
+enum EnumTrackingStatus {
+  Active
+  Inactive
+}
+
+enum EnumCancellationCancelledBy {
+  Seller
+  Buyer
+  Courier
+}
+
+enum EnumFulfillmentSpecificationFulfillmentModes {
+  PickUp
+  Delivery
+  DineIn
+  TakeOut
+  DriveThru
+}
+
+enum EnumFulfillmentSpecificationStatus {
+  NewOrder
+  Confirmed
+  PickedUp
+  Canceled
+  Fulfilled
+  Prepared
+  Rejected
+  CourierRequested
+  CourierAssigned
+  CourierPickedUp
+  CourierCompleted
+  CourierCanceled
+  CourierArrivedAtPickup
+}
+
+enum EnumMenuItemFulfillmentModes {
+  Delivery
+  PickUp
+  DineIn
+  TakeOut
+  DriveThru
+}
+
+enum EnumMenuFulfillmentModes {
+  PickUp
+  Delivery
+  DineIn
+  TakeOut
+  DriveThru
+}
+
+enum EnumBazaarFulfillmentModes {
+  PickUp
+  Delivery
+  DineIn
+  TakeOut
+  DriveThru
+}
+
+enum EnumOrderStatus {
+  Active
+  Complete
+  Cancelled
+}
+
+enum EnumNodeIndustryCode {
+  LastMileDelivery
+  Rideshare
+}
+
+enum EnumNodeOperatorType {
+  Uno
+  Bsn
+  Ssn
+  Csn
+}
+
+enum EnumHourIntervalDays {
+  Monday
+  Tuesday
+  Wednesday
+  Thursday
+  Friday
+  Saturday
+}

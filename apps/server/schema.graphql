@@ -1,0 +1,3286 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Bazaar {
+  createdAt: DateTime!
+  fulfillmentModes: [EnumBazaarFulfillmentModes!]
+  id: String!
+  paymentTerms: PaymentTerm
+  promotions(orderBy: [PromotionOrderByInput!], skip: Float, take: Float, where: PromotionWhereInput): [Promotion!]!
+  sellers(orderBy: [SellerOrderByInput!], skip: Float, take: Float, where: SellerWhereInput): [Seller!]!
+  timeToLive: Float!
+  updatedAt: DateTime!
+}
+
+input BazaarCreateInput {
+  fulfillmentModes: [EnumBazaarFulfillmentModes!]
+  paymentTerms: PaymentTermWhereUniqueInput
+  promotions: PromotionCreateNestedManyWithoutBazaarsInput
+  sellers: SellerCreateNestedManyWithoutBazaarsInput
+  timeToLive: Float!
+}
+
+input BazaarCreateNestedManyWithoutSellersInput {
+  connect: [BazaarWhereUniqueInput!]
+}
+
+input BazaarListRelationFilter {
+  every: BazaarWhereInput
+  none: BazaarWhereInput
+  some: BazaarWhereInput
+}
+
+input BazaarOrderByInput {
+  createdAt: SortOrder
+  fulfillmentModes: SortOrder
+  id: SortOrder
+  paymentTermsId: SortOrder
+  timeToLive: SortOrder
+  updatedAt: SortOrder
+}
+
+input BazaarUpdateInput {
+  fulfillmentModes: [EnumBazaarFulfillmentModes!]
+  paymentTerms: PaymentTermWhereUniqueInput
+  promotions: PromotionUpdateManyWithoutBazaarsInput
+  sellers: SellerUpdateManyWithoutBazaarsInput
+  timeToLive: Float
+}
+
+input BazaarUpdateManyWithoutSellersInput {
+  connect: [BazaarWhereUniqueInput!]
+  disconnect: [BazaarWhereUniqueInput!]
+  set: [BazaarWhereUniqueInput!]
+}
+
+input BazaarWhereInput {
+  id: StringFilter
+  promotions: PromotionListRelationFilter
+  sellers: SellerListRelationFilter
+  timeToLive: IntFilter
+}
+
+input BazaarWhereUniqueInput {
+  id: String!
+}
+
+type Billing {
+  address: String!
+  city: String!
+  country: String!
+  createdAt: DateTime!
+  email: String!
+  id: String!
+  name: String!
+  orders(orderBy: [OrderOrderByInput!], skip: Float, take: Float, where: OrderWhereInput): [Order!]!
+  organization: Organization
+  phone: String!
+  state: String!
+  taxId: String!
+  updatedAt: DateTime!
+}
+
+input BillingCreateInput {
+  address: String!
+  city: String!
+  country: String!
+  email: String!
+  name: String!
+  orders: OrderCreateNestedManyWithoutBillingsInput
+  organization: OrganizationWhereUniqueInput!
+  phone: String!
+  state: String!
+  taxId: String!
+}
+
+input BillingCreateNestedManyWithoutOrganizationsInput {
+  connect: [BillingWhereUniqueInput!]
+}
+
+input BillingListRelationFilter {
+  every: BillingWhereInput
+  none: BillingWhereInput
+  some: BillingWhereInput
+}
+
+input BillingOrderByInput {
+  address: SortOrder
+  city: SortOrder
+  country: SortOrder
+  createdAt: SortOrder
+  email: SortOrder
+  id: SortOrder
+  name: SortOrder
+  organizationId: SortOrder
+  phone: SortOrder
+  state: SortOrder
+  taxId: SortOrder
+  updatedAt: SortOrder
+}
+
+input BillingUpdateInput {
+  address: String
+  city: String
+  country: String
+  email: String
+  name: String
+  orders: OrderUpdateManyWithoutBillingsInput
+  organization: OrganizationWhereUniqueInput
+  phone: String
+  state: String
+  taxId: String
+}
+
+input BillingUpdateManyWithoutOrganizationsInput {
+  connect: [BillingWhereUniqueInput!]
+  disconnect: [BillingWhereUniqueInput!]
+  set: [BillingWhereUniqueInput!]
+}
+
+input BillingWhereInput {
+  address: StringFilter
+  city: StringFilter
+  country: StringFilter
+  email: StringFilter
+  id: StringFilter
+  name: StringFilter
+  orders: OrderListRelationFilter
+  organization: OrganizationWhereUniqueInput
+  phone: StringFilter
+  state: StringFilter
+  taxId: StringFilter
+}
+
+input BillingWhereUniqueInput {
+  id: String!
+}
+
+input BooleanFilter {
+  equals: Boolean
+  not: Boolean
+}
+
+type Cancellation {
+  cancelledBy: EnumCancellationCancelledBy
+  createdAt: DateTime!
+  id: String!
+  isReasonRequired: Boolean!
+  order: Order
+  reason: String!
+  updatedAt: DateTime!
+}
+
+input CancellationCreateInput {
+  cancelledBy: EnumCancellationCancelledBy!
+  isReasonRequired: Boolean!
+  order: OrderWhereUniqueInput
+  reason: String!
+}
+
+input CancellationOrderByInput {
+  cancelledBy: SortOrder
+  createdAt: SortOrder
+  id: SortOrder
+  isReasonRequired: SortOrder
+  orderId: SortOrder
+  reason: SortOrder
+  updatedAt: SortOrder
+}
+
+input CancellationUpdateInput {
+  cancelledBy: EnumCancellationCancelledBy
+  isReasonRequired: Boolean
+  order: OrderWhereUniqueInput
+  reason: String
+}
+
+input CancellationWhereInput {
+  cancelledBy: EnumCancellationCancelledBy
+  id: StringFilter
+  isReasonRequired: BooleanFilter
+  order: OrderWhereUniqueInput
+  reason: StringFilter
+}
+
+input CancellationWhereUniqueInput {
+  id: String!
+}
+
+type Category {
+  createdAt: DateTime!
+  id: String!
+  menuItemIDs: JSON!
+  seller: Seller
+  timeToLive: DateTime!
+  updatedAt: DateTime!
+}
+
+input CategoryCreateInput {
+  menuItemIDs: JSON!
+  seller: SellerWhereUniqueInput
+  timeToLive: DateTime!
+}
+
+input CategoryCreateNestedManyWithoutSellersInput {
+  connect: [CategoryWhereUniqueInput!]
+}
+
+input CategoryListRelationFilter {
+  every: CategoryWhereInput
+  none: CategoryWhereInput
+  some: CategoryWhereInput
+}
+
+input CategoryOrderByInput {
+  createdAt: SortOrder
+  id: SortOrder
+  menuItemIDs: SortOrder
+  sellerId: SortOrder
+  timeToLive: SortOrder
+  updatedAt: SortOrder
+}
+
+input CategoryUpdateInput {
+  menuItemIDs: JSON
+  seller: SellerWhereUniqueInput
+  timeToLive: DateTime
+}
+
+input CategoryUpdateManyWithoutSellersInput {
+  connect: [CategoryWhereUniqueInput!]
+  disconnect: [CategoryWhereUniqueInput!]
+  set: [CategoryWhereUniqueInput!]
+}
+
+input CategoryWhereInput {
+  id: StringFilter
+  menuItemIDs: JsonFilter
+  seller: SellerWhereUniqueInput
+  timeToLive: DateTimeFilter
+}
+
+input CategoryWhereUniqueInput {
+  id: String!
+}
+
+type Condition {
+  bsnId: String!
+  bsnUrl: String!
+  createdAt: DateTime!
+  csnId: String
+  csnUrl: String
+  id: String!
+  industryCode: String!
+  location: Location
+  messageId: String!
+  method: String!
+  publicKey: String!
+  ssnId: String!
+  ssnUrl: String!
+  timeToLive: String!
+  transactionId: String!
+  updatedAt: DateTime!
+}
+
+input ConditionCreateInput {
+  bsnId: String!
+  bsnUrl: String!
+  csnId: String
+  csnUrl: String
+  industryCode: String!
+  location: LocationWhereUniqueInput!
+  messageId: String!
+  method: String!
+  publicKey: String!
+  ssnId: String!
+  ssnUrl: String!
+  timeToLive: String!
+  transactionId: String!
+}
+
+input ConditionCreateNestedManyWithoutLocationsInput {
+  connect: [ConditionWhereUniqueInput!]
+}
+
+input ConditionOrderByInput {
+  bsnId: SortOrder
+  bsnUrl: SortOrder
+  createdAt: SortOrder
+  csnId: SortOrder
+  csnUrl: SortOrder
+  id: SortOrder
+  industryCode: SortOrder
+  locationId: SortOrder
+  messageId: SortOrder
+  method: SortOrder
+  publicKey: SortOrder
+  ssnId: SortOrder
+  ssnUrl: SortOrder
+  timeToLive: SortOrder
+  transactionId: SortOrder
+  updatedAt: SortOrder
+}
+
+input ConditionUpdateInput {
+  bsnId: String
+  bsnUrl: String
+  csnId: String
+  csnUrl: String
+  industryCode: String
+  location: LocationWhereUniqueInput
+  messageId: String
+  method: String
+  publicKey: String
+  ssnId: String
+  ssnUrl: String
+  timeToLive: String
+  transactionId: String
+}
+
+input ConditionUpdateManyWithoutLocationsInput {
+  connect: [ConditionWhereUniqueInput!]
+  disconnect: [ConditionWhereUniqueInput!]
+  set: [ConditionWhereUniqueInput!]
+}
+
+input ConditionWhereInput {
+  bsnId: StringFilter
+  bsnUrl: StringFilter
+  csnId: StringNullableFilter
+  csnUrl: StringNullableFilter
+  id: StringFilter
+  industryCode: StringFilter
+  location: LocationWhereUniqueInput
+  messageId: StringFilter
+  method: StringFilter
+  publicKey: StringFilter
+  ssnId: StringFilter
+  ssnUrl: StringFilter
+  timeToLive: StringFilter
+  transactionId: StringFilter
+}
+
+input ConditionWhereUniqueInput {
+  id: String!
+}
+
+type Contact {
+  createdAt: DateTime!
+  email: String!
+  fulfillmentSpecifications(orderBy: [FulfillmentSpecificationOrderByInput!], skip: Float, take: Float, where: FulfillmentSpecificationWhereInput): [FulfillmentSpecification!]!
+  id: String!
+  individuals(orderBy: [IndividualOrderByInput!], skip: Float, take: Float, where: IndividualWhereInput): [Individual!]!
+  organizations(orderBy: [OrganizationOrderByInput!], skip: Float, take: Float, where: OrganizationWhereInput): [Organization!]!
+  phone: String!
+  updatedAt: DateTime!
+  waypoints(orderBy: [WaypointOrderByInput!], skip: Float, take: Float, where: WaypointWhereInput): [Waypoint!]!
+}
+
+input ContactCreateInput {
+  email: String!
+  fulfillmentSpecifications: FulfillmentSpecificationCreateNestedManyWithoutContactsInput
+  individuals: IndividualCreateNestedManyWithoutContactsInput
+  organizations: OrganizationCreateNestedManyWithoutContactsInput
+  phone: String!
+  waypoints: WaypointCreateNestedManyWithoutContactsInput
+}
+
+input ContactCreateNestedManyWithoutOrganizationsInput {
+  connect: [ContactWhereUniqueInput!]
+}
+
+input ContactListRelationFilter {
+  every: ContactWhereInput
+  none: ContactWhereInput
+  some: ContactWhereInput
+}
+
+input ContactOrderByInput {
+  createdAt: SortOrder
+  email: SortOrder
+  id: SortOrder
+  phone: SortOrder
+  updatedAt: SortOrder
+}
+
+input ContactUpdateInput {
+  email: String
+  fulfillmentSpecifications: FulfillmentSpecificationUpdateManyWithoutContactsInput
+  individuals: IndividualUpdateManyWithoutContactsInput
+  organizations: OrganizationUpdateManyWithoutContactsInput
+  phone: String
+  waypoints: WaypointUpdateManyWithoutContactsInput
+}
+
+input ContactUpdateManyWithoutOrganizationsInput {
+  connect: [ContactWhereUniqueInput!]
+  disconnect: [ContactWhereUniqueInput!]
+  set: [ContactWhereUniqueInput!]
+}
+
+input ContactWhereInput {
+  email: StringFilter
+  id: StringFilter
+  phone: StringFilter
+}
+
+input ContactWhereUniqueInput {
+  id: String!
+}
+
+type Courier {
+  createdAt: DateTime!
+  fulfillmentSpecifications(orderBy: [FulfillmentSpecificationOrderByInput!], skip: Float, take: Float, where: FulfillmentSpecificationWhereInput): [FulfillmentSpecification!]!
+  id: String!
+  inidividual: Individual
+  organization(orderBy: [OrganizationOrderByInput!], skip: Float, take: Float, where: OrganizationWhereInput): [Organization!]!
+  rating: Float
+  ratings(orderBy: [RatingOrderByInput!], skip: Float, take: Float, where: RatingWhereInput): [Rating!]!
+  updatedAt: DateTime!
+  users: User
+}
+
+input CourierCreateInput {
+  fulfillmentSpecifications: FulfillmentSpecificationCreateNestedManyWithoutCouriersInput
+  inidividual: IndividualWhereUniqueInput
+  organization: OrganizationCreateNestedManyWithoutCouriersInput
+  rating: Float
+  ratings: RatingCreateNestedManyWithoutCouriersInput
+  users: UserWhereUniqueInput!
+}
+
+input CourierCreateNestedManyWithoutOrganizationsInput {
+  connect: [CourierWhereUniqueInput!]
+}
+
+input CourierListRelationFilter {
+  every: CourierWhereInput
+  none: CourierWhereInput
+  some: CourierWhereInput
+}
+
+input CourierOrderByInput {
+  createdAt: SortOrder
+  id: SortOrder
+  inidividualId: SortOrder
+  rating: SortOrder
+  updatedAt: SortOrder
+  usersId: SortOrder
+}
+
+input CourierUpdateInput {
+  fulfillmentSpecifications: FulfillmentSpecificationUpdateManyWithoutCouriersInput
+  inidividual: IndividualWhereUniqueInput
+  organization: OrganizationUpdateManyWithoutCouriersInput
+  rating: Float
+  ratings: RatingUpdateManyWithoutCouriersInput
+  users: UserWhereUniqueInput
+}
+
+input CourierUpdateManyWithoutOrganizationsInput {
+  connect: [CourierWhereUniqueInput!]
+  disconnect: [CourierWhereUniqueInput!]
+  set: [CourierWhereUniqueInput!]
+}
+
+input CourierWhereInput {
+  id: StringFilter
+  inidividual: IndividualWhereUniqueInput
+  organization: OrganizationListRelationFilter
+  rating: FloatNullableFilter
+  ratings: RatingListRelationFilter
+  users: UserWhereUniqueInput
+}
+
+input CourierWhereUniqueInput {
+  id: String!
+}
+
+input Credentials {
+  password: String!
+  username: String!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+input DateTimeFilter {
+  equals: DateTime
+  gt: DateTime
+  gte: DateTime
+  in: [DateTime!]
+  lt: DateTime
+  lte: DateTime
+  not: DateTime
+  notIn: [DateTime!]
+}
+
+input DateTimeNullableFilter {
+  equals: DateTime
+  gt: DateTime
+  gte: DateTime
+  in: [DateTime!]
+  lt: DateTime
+  lte: DateTime
+  not: DateTime
+  notIn: [DateTime!]
+}
+
+enum EnumBazaarFulfillmentModes {
+  Delivery
+  DineIn
+  DriveThru
+  PickUp
+  TakeOut
+}
+
+enum EnumCancellationCancelledBy {
+  Buyer
+  Courier
+  Seller
+}
+
+enum EnumFulfillmentSpecificationFulfillmentModes {
+  Delivery
+  DineIn
+  DriveThru
+  PickUp
+  TakeOut
+}
+
+enum EnumFulfillmentSpecificationStatus {
+  Canceled
+  Confirmed
+  CourierArrivedAtPickup
+  CourierAssigned
+  CourierCanceled
+  CourierCompleted
+  CourierPickedUp
+  CourierRequested
+  Fulfilled
+  NewOrder
+  PickedUp
+  Prepared
+  Rejected
+}
+
+enum EnumHourIntervalDays {
+  Friday
+  Monday
+  Saturday
+  Thursday
+  Tuesday
+  Wednesday
+}
+
+enum EnumIndividualGender {
+  Female
+  Male
+  Na
+}
+
+enum EnumMenuFulfillmentModes {
+  Delivery
+  DineIn
+  DriveThru
+  PickUp
+  TakeOut
+}
+
+enum EnumMenuItemFulfillmentModes {
+  Delivery
+  DineIn
+  DriveThru
+  PickUp
+  TakeOut
+}
+
+enum EnumNodeIndustryCode {
+  LastMileDelivery
+  Rideshare
+}
+
+enum EnumNodeOperatorType {
+  Bsn
+  Csn
+  Ssn
+  Uno
+}
+
+enum EnumOrderStatus {
+  Active
+  Cancelled
+  Complete
+}
+
+enum EnumPaymentTermCollectedBy {
+  Bsn
+  Csn
+  Ssn
+}
+
+enum EnumPaymentTermLifecycleProcessing {
+  OnFulfillment
+  PostFulfillment
+  PreFulfillment
+  PreOrder
+}
+
+enum EnumPaymentTermStatus {
+  Collectable
+  Processed
+}
+
+enum EnumRatingEntity {
+  Courier
+  Fulfillment
+  Item
+  Order
+  Seller
+  Support
+}
+
+enum EnumScalarClassification {
+  Constant
+  Variable
+}
+
+enum EnumTrackingStatus {
+  Active
+  Inactive
+}
+
+input FloatFilter {
+  equals: Float
+  gt: Float
+  gte: Float
+  in: [Float!]
+  lt: Float
+  lte: Float
+  not: Float
+  notIn: [Float!]
+}
+
+input FloatNullableFilter {
+  equals: Float
+  gt: Float
+  gte: Float
+  in: [Float!]
+  lt: Float
+  lte: Float
+  not: Float
+  notIn: [Float!]
+}
+
+type FulfillmentSpecification {
+  buyer: User
+  contact: Contact
+  courier: Courier
+  createdAt: DateTime!
+  fulfillmentModes: EnumFulfillmentSpecificationFulfillmentModes
+  id: String!
+  isRateable: Boolean!
+  orders(orderBy: [OrderOrderByInput!], skip: Float, take: Float, where: OrderWhereInput): [Order!]!
+  rating: Float
+  searches(orderBy: [SearchOrderByInput!], skip: Float, take: Float, where: SearchWhereInput): [Search!]!
+  seller: Seller
+  status: EnumFulfillmentSpecificationStatus
+  tracking: Tracking
+  updatedAt: DateTime!
+  updatedBy: String!
+  vehicle: Vehicle
+  waypoints(orderBy: [WaypointOrderByInput!], skip: Float, take: Float, where: WaypointWhereInput): [Waypoint!]!
+}
+
+input FulfillmentSpecificationCreateInput {
+  buyer: UserWhereUniqueInput!
+  contact: ContactWhereUniqueInput!
+  courier: CourierWhereUniqueInput
+  fulfillmentModes: EnumFulfillmentSpecificationFulfillmentModes!
+  isRateable: Boolean!
+  orders: OrderCreateNestedManyWithoutFulfillmentSpecificationsInput
+  rating: Float
+  searches: SearchCreateNestedManyWithoutFulfillmentSpecificationsInput
+  seller: SellerWhereUniqueInput!
+  status: EnumFulfillmentSpecificationStatus
+  tracking: TrackingWhereUniqueInput
+  updatedBy: String!
+  vehicle: VehicleWhereUniqueInput
+  waypoints: WaypointCreateNestedManyWithoutFulfillmentSpecificationsInput
+}
+
+input FulfillmentSpecificationCreateNestedManyWithoutContactsInput {
+  connect: [FulfillmentSpecificationWhereUniqueInput!]
+}
+
+input FulfillmentSpecificationCreateNestedManyWithoutCouriersInput {
+  connect: [FulfillmentSpecificationWhereUniqueInput!]
+}
+
+input FulfillmentSpecificationCreateNestedManyWithoutSellersInput {
+  connect: [FulfillmentSpecificationWhereUniqueInput!]
+}
+
+input FulfillmentSpecificationCreateNestedManyWithoutUsersInput {
+  connect: [FulfillmentSpecificationWhereUniqueInput!]
+}
+
+input FulfillmentSpecificationCreateNestedManyWithoutVehiclesInput {
+  connect: [FulfillmentSpecificationWhereUniqueInput!]
+}
+
+input FulfillmentSpecificationListRelationFilter {
+  every: FulfillmentSpecificationWhereInput
+  none: FulfillmentSpecificationWhereInput
+  some: FulfillmentSpecificationWhereInput
+}
+
+input FulfillmentSpecificationOrderByInput {
+  buyerId: SortOrder
+  contactId: SortOrder
+  courierId: SortOrder
+  createdAt: SortOrder
+  fulfillmentModes: SortOrder
+  id: SortOrder
+  isRateable: SortOrder
+  rating: SortOrder
+  sellerId: SortOrder
+  status: SortOrder
+  trackingId: SortOrder
+  updatedAt: SortOrder
+  updatedBy: SortOrder
+  vehicleId: SortOrder
+}
+
+input FulfillmentSpecificationUpdateInput {
+  buyer: UserWhereUniqueInput
+  contact: ContactWhereUniqueInput
+  courier: CourierWhereUniqueInput
+  fulfillmentModes: EnumFulfillmentSpecificationFulfillmentModes
+  isRateable: Boolean
+  orders: OrderUpdateManyWithoutFulfillmentSpecificationsInput
+  rating: Float
+  searches: SearchUpdateManyWithoutFulfillmentSpecificationsInput
+  seller: SellerWhereUniqueInput
+  status: EnumFulfillmentSpecificationStatus
+  tracking: TrackingWhereUniqueInput
+  updatedBy: String
+  vehicle: VehicleWhereUniqueInput
+  waypoints: WaypointUpdateManyWithoutFulfillmentSpecificationsInput
+}
+
+input FulfillmentSpecificationUpdateManyWithoutContactsInput {
+  connect: [FulfillmentSpecificationWhereUniqueInput!]
+  disconnect: [FulfillmentSpecificationWhereUniqueInput!]
+  set: [FulfillmentSpecificationWhereUniqueInput!]
+}
+
+input FulfillmentSpecificationUpdateManyWithoutCouriersInput {
+  connect: [FulfillmentSpecificationWhereUniqueInput!]
+  disconnect: [FulfillmentSpecificationWhereUniqueInput!]
+  set: [FulfillmentSpecificationWhereUniqueInput!]
+}
+
+input FulfillmentSpecificationUpdateManyWithoutSellersInput {
+  connect: [FulfillmentSpecificationWhereUniqueInput!]
+  disconnect: [FulfillmentSpecificationWhereUniqueInput!]
+  set: [FulfillmentSpecificationWhereUniqueInput!]
+}
+
+input FulfillmentSpecificationUpdateManyWithoutUsersInput {
+  connect: [FulfillmentSpecificationWhereUniqueInput!]
+  disconnect: [FulfillmentSpecificationWhereUniqueInput!]
+  set: [FulfillmentSpecificationWhereUniqueInput!]
+}
+
+input FulfillmentSpecificationUpdateManyWithoutVehiclesInput {
+  connect: [FulfillmentSpecificationWhereUniqueInput!]
+  disconnect: [FulfillmentSpecificationWhereUniqueInput!]
+  set: [FulfillmentSpecificationWhereUniqueInput!]
+}
+
+input FulfillmentSpecificationWhereInput {
+  buyer: UserWhereUniqueInput
+  contact: ContactWhereUniqueInput
+  courier: CourierWhereUniqueInput
+  fulfillmentModes: EnumFulfillmentSpecificationFulfillmentModes
+  id: StringFilter
+  isRateable: BooleanFilter
+  orders: OrderListRelationFilter
+  rating: FloatNullableFilter
+  searches: SearchListRelationFilter
+  seller: SellerWhereUniqueInput
+  status: EnumFulfillmentSpecificationStatus
+  tracking: TrackingWhereUniqueInput
+  updatedBy: StringFilter
+  vehicle: VehicleWhereUniqueInput
+  waypoints: WaypointListRelationFilter
+}
+
+input FulfillmentSpecificationWhereUniqueInput {
+  id: String!
+}
+
+type HourInterval {
+  createdAt: DateTime!
+  days: [EnumHourIntervalDays!]
+  fromHour: Float!
+  fromMinute: Float!
+  id: String!
+  menus: Menu
+  toHour: Float!
+  toMinute: Float!
+  updatedAt: DateTime!
+}
+
+input HourIntervalCreateInput {
+  days: [EnumHourIntervalDays!]
+  fromHour: Float!
+  fromMinute: Float!
+  menus: MenuWhereUniqueInput
+  toHour: Float!
+  toMinute: Float!
+}
+
+input HourIntervalCreateNestedManyWithoutMenusInput {
+  connect: [HourIntervalWhereUniqueInput!]
+}
+
+input HourIntervalListRelationFilter {
+  every: HourIntervalWhereInput
+  none: HourIntervalWhereInput
+  some: HourIntervalWhereInput
+}
+
+input HourIntervalOrderByInput {
+  createdAt: SortOrder
+  days: SortOrder
+  fromHour: SortOrder
+  fromMinute: SortOrder
+  id: SortOrder
+  menusId: SortOrder
+  toHour: SortOrder
+  toMinute: SortOrder
+  updatedAt: SortOrder
+}
+
+input HourIntervalUpdateInput {
+  days: [EnumHourIntervalDays!]
+  fromHour: Float
+  fromMinute: Float
+  menus: MenuWhereUniqueInput
+  toHour: Float
+  toMinute: Float
+}
+
+input HourIntervalUpdateManyWithoutMenusInput {
+  connect: [HourIntervalWhereUniqueInput!]
+  disconnect: [HourIntervalWhereUniqueInput!]
+  set: [HourIntervalWhereUniqueInput!]
+}
+
+input HourIntervalWhereInput {
+  fromHour: IntFilter
+  fromMinute: IntFilter
+  id: StringFilter
+  toHour: IntFilter
+  toMinute: IntFilter
+}
+
+input HourIntervalWhereUniqueInput {
+  id: String!
+}
+
+type Image {
+  createdAt: DateTime!
+  height: String!
+  id: String!
+  individuals: Individual
+  menuItem: MenuItem
+  rating: Rating
+  updatedAt: DateTime!
+  url: String!
+  width: String!
+}
+
+input ImageCreateInput {
+  height: String!
+  individuals: IndividualWhereUniqueInput
+  menuItem: MenuItemWhereUniqueInput
+  rating: RatingWhereUniqueInput
+  url: String!
+  width: String!
+}
+
+input ImageCreateNestedManyWithoutIndividualsInput {
+  connect: [ImageWhereUniqueInput!]
+}
+
+input ImageCreateNestedManyWithoutMenuItemsInput {
+  connect: [ImageWhereUniqueInput!]
+}
+
+input ImageCreateNestedManyWithoutRatingsInput {
+  connect: [ImageWhereUniqueInput!]
+}
+
+input ImageListRelationFilter {
+  every: ImageWhereInput
+  none: ImageWhereInput
+  some: ImageWhereInput
+}
+
+input ImageOrderByInput {
+  createdAt: SortOrder
+  height: SortOrder
+  id: SortOrder
+  individualsId: SortOrder
+  menuItemId: SortOrder
+  ratingId: SortOrder
+  updatedAt: SortOrder
+  url: SortOrder
+  width: SortOrder
+}
+
+input ImageUpdateInput {
+  height: String
+  individuals: IndividualWhereUniqueInput
+  menuItem: MenuItemWhereUniqueInput
+  rating: RatingWhereUniqueInput
+  url: String
+  width: String
+}
+
+input ImageUpdateManyWithoutIndividualsInput {
+  connect: [ImageWhereUniqueInput!]
+  disconnect: [ImageWhereUniqueInput!]
+  set: [ImageWhereUniqueInput!]
+}
+
+input ImageUpdateManyWithoutMenuItemsInput {
+  connect: [ImageWhereUniqueInput!]
+  disconnect: [ImageWhereUniqueInput!]
+  set: [ImageWhereUniqueInput!]
+}
+
+input ImageUpdateManyWithoutRatingsInput {
+  connect: [ImageWhereUniqueInput!]
+  disconnect: [ImageWhereUniqueInput!]
+  set: [ImageWhereUniqueInput!]
+}
+
+input ImageWhereInput {
+  height: StringFilter
+  id: StringFilter
+  url: StringFilter
+  width: StringFilter
+}
+
+input ImageWhereUniqueInput {
+  id: String!
+}
+
+type Individual {
+  contact: Contact
+  couriers: Courier
+  createdAt: DateTime!
+  dateOfBirth: DateTime
+  firstName: String!
+  gender: EnumIndividualGender
+  id: String!
+  image(orderBy: [ImageOrderByInput!], skip: Float, take: Float, where: ImageWhereInput): [Image!]!
+  lastName: String!
+  middleName: String
+  updatedAt: DateTime!
+  username: String!
+  users: User
+  waypoints(orderBy: [WaypointOrderByInput!], skip: Float, take: Float, where: WaypointWhereInput): [Waypoint!]!
+}
+
+input IndividualCreateInput {
+  contact: ContactWhereUniqueInput
+  couriers: CourierWhereUniqueInput
+  dateOfBirth: DateTime
+  firstName: String!
+  gender: EnumIndividualGender
+  image: ImageCreateNestedManyWithoutIndividualsInput
+  lastName: String!
+  middleName: String
+  username: String!
+  users: UserWhereUniqueInput
+  waypoints: WaypointCreateNestedManyWithoutIndividualsInput
+}
+
+input IndividualCreateNestedManyWithoutContactsInput {
+  connect: [IndividualWhereUniqueInput!]
+}
+
+input IndividualCreateNestedManyWithoutWaypointsInput {
+  connect: [IndividualWhereUniqueInput!]
+}
+
+input IndividualListRelationFilter {
+  every: IndividualWhereInput
+  none: IndividualWhereInput
+  some: IndividualWhereInput
+}
+
+input IndividualOrderByInput {
+  contactId: SortOrder
+  couriersId: SortOrder
+  createdAt: SortOrder
+  dateOfBirth: SortOrder
+  firstName: SortOrder
+  gender: SortOrder
+  id: SortOrder
+  lastName: SortOrder
+  middleName: SortOrder
+  updatedAt: SortOrder
+  username: SortOrder
+  usersId: SortOrder
+}
+
+input IndividualUpdateInput {
+  contact: ContactWhereUniqueInput
+  couriers: CourierWhereUniqueInput
+  dateOfBirth: DateTime
+  firstName: String
+  gender: EnumIndividualGender
+  image: ImageUpdateManyWithoutIndividualsInput
+  lastName: String
+  middleName: String
+  username: String
+  users: UserWhereUniqueInput
+  waypoints: WaypointUpdateManyWithoutIndividualsInput
+}
+
+input IndividualUpdateManyWithoutContactsInput {
+  connect: [IndividualWhereUniqueInput!]
+  disconnect: [IndividualWhereUniqueInput!]
+  set: [IndividualWhereUniqueInput!]
+}
+
+input IndividualUpdateManyWithoutWaypointsInput {
+  connect: [IndividualWhereUniqueInput!]
+  disconnect: [IndividualWhereUniqueInput!]
+  set: [IndividualWhereUniqueInput!]
+}
+
+input IndividualWhereInput {
+  contact: ContactWhereUniqueInput
+  couriers: CourierWhereUniqueInput
+  dateOfBirth: DateTimeNullableFilter
+  firstName: StringFilter
+  gender: EnumIndividualGender
+  id: StringFilter
+  image: ImageListRelationFilter
+  lastName: StringFilter
+  middleName: StringNullableFilter
+  username: StringFilter
+  users: UserWhereUniqueInput
+}
+
+input IndividualWhereUniqueInput {
+  id: String!
+}
+
+input IntFilter {
+  equals: Int
+  gt: Int
+  gte: Int
+  in: [Int!]
+  lt: Int
+  lte: Int
+  not: Int
+  notIn: [Int!]
+}
+
+input IntNullableFilter {
+  equals: Int
+  gt: Int
+  gte: Int
+  in: [Int!]
+  lt: Int
+  lte: Int
+  not: Int
+  notIn: [Int!]
+}
+
+type ItemQuantity {
+  allocatedCount: Float!
+  allocatedMeasure: Scalar
+  availableCount: Float!
+  availableMeasure: Scalar
+  id: String!
+  maximumPurchasableCount: Float!
+  maximumPurchasableMeasure: Scalar
+  menuItem: MenuItem
+  minimumPurchasableCount: Float!
+  minimumPurchasableMeasure: Scalar
+  selectedCount: Float
+  selectedMeasure: Scalar
+}
+
+input ItemQuantityCreateInput {
+  allocatedCount: Float!
+  allocatedMeasure: ScalarWhereUniqueInput!
+  availableCount: Float!
+  availableMeasure: ScalarWhereUniqueInput!
+  maximumPurchasableCount: Float!
+  maximumPurchasableMeasure: ScalarWhereUniqueInput!
+  menuItem: MenuItemWhereUniqueInput
+  minimumPurchasableCount: Float!
+  minimumPurchasableMeasure: ScalarWhereUniqueInput
+  selectedCount: Float
+  selectedMeasure: ScalarWhereUniqueInput
+}
+
+input ItemQuantityCreateNestedManyWithoutScalarsInput {
+  connect: [ItemQuantityWhereUniqueInput!]
+}
+
+input ItemQuantityListRelationFilter {
+  every: ItemQuantityWhereInput
+  none: ItemQuantityWhereInput
+  some: ItemQuantityWhereInput
+}
+
+input ItemQuantityOrderByInput {
+  allocatedCount: SortOrder
+  allocatedMeasureId: SortOrder
+  availableCount: SortOrder
+  availableMeasureId: SortOrder
+  id: SortOrder
+  maximumPurchasableCount: SortOrder
+  maximumPurchasableMeasureId: SortOrder
+  menuItemId: SortOrder
+  minimumPurchasableCount: SortOrder
+  minimumPurchasableMeasureId: SortOrder
+  selectedCount: SortOrder
+  selectedMeasureId: SortOrder
+}
+
+input ItemQuantityUpdateInput {
+  allocatedCount: Float
+  allocatedMeasure: ScalarWhereUniqueInput
+  availableCount: Float
+  availableMeasure: ScalarWhereUniqueInput
+  maximumPurchasableCount: Float
+  maximumPurchasableMeasure: ScalarWhereUniqueInput
+  menuItem: MenuItemWhereUniqueInput
+  minimumPurchasableCount: Float
+  minimumPurchasableMeasure: ScalarWhereUniqueInput
+  selectedCount: Float
+  selectedMeasure: ScalarWhereUniqueInput
+}
+
+input ItemQuantityUpdateManyWithoutScalarsInput {
+  connect: [ItemQuantityWhereUniqueInput!]
+  disconnect: [ItemQuantityWhereUniqueInput!]
+  set: [ItemQuantityWhereUniqueInput!]
+}
+
+input ItemQuantityWhereInput {
+  allocatedCount: IntFilter
+  availableCount: IntFilter
+  id: StringFilter
+  maximumPurchasableCount: IntFilter
+  minimumPurchasableCount: IntFilter
+  selectedCount: IntNullableFilter
+}
+
+input ItemQuantityWhereUniqueInput {
+  id: String!
+}
+
+"""
+The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSON @specifiedBy(url: "http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf")
+
+"""
+The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSONObject @specifiedBy(url: "http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf")
+
+input JsonFilter {
+  equals: JSONObject
+  not: JSONObject
+}
+
+type Location {
+  address: String!
+  areaCode: String!
+  city: String!
+  conditions(orderBy: [ConditionOrderByInput!], skip: Float, take: Float, where: ConditionWhereInput): [Condition!]!
+  coordinate: String!
+  country: String!
+  createdAt: DateTime!
+  id: String!
+  mapUrl: String
+  node: Node
+  organizations: Organization
+  promotion(orderBy: [PromotionOrderByInput!], skip: Float, take: Float, where: PromotionWhereInput): [Promotion!]!
+  radius: Float
+  seller: Seller
+  state: String!
+  trackings: Tracking
+  updatedAt: DateTime!
+  waypoints: Waypoint
+}
+
+input LocationCreateInput {
+  address: String!
+  areaCode: String!
+  city: String!
+  conditions: ConditionCreateNestedManyWithoutLocationsInput
+  coordinate: String!
+  country: String!
+  mapUrl: String
+  node: NodeWhereUniqueInput
+  organizations: OrganizationWhereUniqueInput
+  promotion: PromotionCreateNestedManyWithoutLocationsInput
+  radius: Float
+  seller: SellerWhereUniqueInput
+  state: String!
+  trackings: TrackingWhereUniqueInput
+  waypoints: WaypointWhereUniqueInput
+}
+
+input LocationCreateNestedManyWithoutNodesInput {
+  connect: [LocationWhereUniqueInput!]
+}
+
+input LocationCreateNestedManyWithoutOrganizationsInput {
+  connect: [LocationWhereUniqueInput!]
+}
+
+input LocationCreateNestedManyWithoutPromotionsInput {
+  connect: [LocationWhereUniqueInput!]
+}
+
+input LocationCreateNestedManyWithoutSellersInput {
+  connect: [LocationWhereUniqueInput!]
+}
+
+input LocationListRelationFilter {
+  every: LocationWhereInput
+  none: LocationWhereInput
+  some: LocationWhereInput
+}
+
+input LocationOrderByInput {
+  address: SortOrder
+  areaCode: SortOrder
+  city: SortOrder
+  coordinate: SortOrder
+  country: SortOrder
+  createdAt: SortOrder
+  id: SortOrder
+  mapUrl: SortOrder
+  nodeId: SortOrder
+  organizationsId: SortOrder
+  radius: SortOrder
+  sellerId: SortOrder
+  state: SortOrder
+  trackingsId: SortOrder
+  updatedAt: SortOrder
+  waypointsId: SortOrder
+}
+
+input LocationUpdateInput {
+  address: String
+  areaCode: String
+  city: String
+  conditions: ConditionUpdateManyWithoutLocationsInput
+  coordinate: String
+  country: String
+  mapUrl: String
+  node: NodeWhereUniqueInput
+  organizations: OrganizationWhereUniqueInput
+  promotion: PromotionUpdateManyWithoutLocationsInput
+  radius: Float
+  seller: SellerWhereUniqueInput
+  state: String
+  trackings: TrackingWhereUniqueInput
+  waypoints: WaypointWhereUniqueInput
+}
+
+input LocationUpdateManyWithoutNodesInput {
+  connect: [LocationWhereUniqueInput!]
+  disconnect: [LocationWhereUniqueInput!]
+  set: [LocationWhereUniqueInput!]
+}
+
+input LocationUpdateManyWithoutOrganizationsInput {
+  connect: [LocationWhereUniqueInput!]
+  disconnect: [LocationWhereUniqueInput!]
+  set: [LocationWhereUniqueInput!]
+}
+
+input LocationUpdateManyWithoutPromotionsInput {
+  connect: [LocationWhereUniqueInput!]
+  disconnect: [LocationWhereUniqueInput!]
+  set: [LocationWhereUniqueInput!]
+}
+
+input LocationUpdateManyWithoutSellersInput {
+  connect: [LocationWhereUniqueInput!]
+  disconnect: [LocationWhereUniqueInput!]
+  set: [LocationWhereUniqueInput!]
+}
+
+input LocationWhereInput {
+  address: StringFilter
+  areaCode: StringFilter
+  city: StringFilter
+  coordinate: StringFilter
+  country: StringFilter
+  id: StringFilter
+  node: NodeWhereUniqueInput
+  organizations: OrganizationWhereUniqueInput
+  promotion: PromotionListRelationFilter
+  radius: IntNullableFilter
+  seller: SellerWhereUniqueInput
+  state: StringFilter
+  trackings: TrackingWhereUniqueInput
+}
+
+input LocationWhereUniqueInput {
+  id: String!
+}
+
+type MediaFile {
+  createdAt: DateTime!
+  id: String!
+  menuItems: MenuItem
+  mimeType: String!
+  rating: Rating
+  updatedAt: DateTime!
+  url: String!
+}
+
+input MediaFileCreateInput {
+  menuItems: MenuItemWhereUniqueInput
+  mimeType: String!
+  rating: RatingWhereUniqueInput
+  url: String!
+}
+
+input MediaFileCreateNestedManyWithoutMenuItemsInput {
+  connect: [MediaFileWhereUniqueInput!]
+}
+
+input MediaFileCreateNestedManyWithoutRatingsInput {
+  connect: [MediaFileWhereUniqueInput!]
+}
+
+input MediaFileListRelationFilter {
+  every: MediaFileWhereInput
+  none: MediaFileWhereInput
+  some: MediaFileWhereInput
+}
+
+input MediaFileOrderByInput {
+  createdAt: SortOrder
+  id: SortOrder
+  menuItemsId: SortOrder
+  mimeType: SortOrder
+  ratingId: SortOrder
+  updatedAt: SortOrder
+  url: SortOrder
+}
+
+input MediaFileUpdateInput {
+  menuItems: MenuItemWhereUniqueInput
+  mimeType: String
+  rating: RatingWhereUniqueInput
+  url: String
+}
+
+input MediaFileUpdateManyWithoutMenuItemsInput {
+  connect: [MediaFileWhereUniqueInput!]
+  disconnect: [MediaFileWhereUniqueInput!]
+  set: [MediaFileWhereUniqueInput!]
+}
+
+input MediaFileUpdateManyWithoutRatingsInput {
+  connect: [MediaFileWhereUniqueInput!]
+  disconnect: [MediaFileWhereUniqueInput!]
+  set: [MediaFileWhereUniqueInput!]
+}
+
+input MediaFileWhereInput {
+  id: StringFilter
+  mimeType: StringFilter
+  rating: RatingWhereUniqueInput
+}
+
+input MediaFileWhereUniqueInput {
+  id: String!
+}
+
+type Menu {
+  categoryIDs: JSON!
+  createdAt: DateTime!
+  fulfillmentModes: [EnumMenuFulfillmentModes!]
+  hourIntervals(orderBy: [HourIntervalOrderByInput!], skip: Float, take: Float, where: HourIntervalWhereInput): [HourInterval!]!
+  id: String!
+  name: String!
+  seller: Seller
+  updatedAt: DateTime!
+}
+
+input MenuCreateInput {
+  categoryIDs: JSON!
+  fulfillmentModes: [EnumMenuFulfillmentModes!]
+  hourIntervals: HourIntervalCreateNestedManyWithoutMenusInput
+  name: String!
+  seller: SellerWhereUniqueInput!
+}
+
+input MenuCreateNestedManyWithoutSellersInput {
+  connect: [MenuWhereUniqueInput!]
+}
+
+type MenuItem {
+  createdAt: DateTime!
+  currencyCode: String!
+  fulfillmentModes: [EnumMenuItemFulfillmentModes!]
+  id: String!
+  images(orderBy: [ImageOrderByInput!], skip: Float, take: Float, where: ImageWhereInput): [Image!]!
+  isRateable: Boolean!
+  locationIDs: JSON
+  mediaFile(orderBy: [MediaFileOrderByInput!], skip: Float, take: Float, where: MediaFileWhereInput): [MediaFile!]!
+  menuItemsSelectedModifiers(orderBy: [MenuItemOrderByInput!], skip: Float, take: Float, where: MenuItemWhereInput): [MenuItem!]!
+  modifierGroupIDs: JSON
+  orders(orderBy: [OrderOrderByInput!], skip: Float, take: Float, where: OrderWhereInput): [Order!]!
+  organization(orderBy: [OrganizationOrderByInput!], skip: Float, take: Float, where: OrganizationWhereInput): [Organization!]!
+  paymentModes: JSON!
+  price: Float!
+  quantity: ItemQuantity
+  quotes(orderBy: [QuoteOrderByInput!], skip: Float, take: Float, where: QuoteWhereInput): [Quote!]!
+  rating: Float
+  searches(orderBy: [SearchOrderByInput!], skip: Float, take: Float, where: SearchWhereInput): [Search!]!
+  selectedModifiers(orderBy: [MenuItemOrderByInput!], skip: Float, take: Float, where: MenuItemWhereInput): [MenuItem!]!
+  sellers: Seller
+  timeToLive: DateTime!
+  updatedAt: DateTime!
+}
+
+input MenuItemCreateInput {
+  currencyCode: String!
+  fulfillmentModes: [EnumMenuItemFulfillmentModes!]
+  images: ImageCreateNestedManyWithoutMenuItemsInput
+  isRateable: Boolean!
+  locationIDs: JSON
+  mediaFile: MediaFileCreateNestedManyWithoutMenuItemsInput
+  menuItemsSelectedModifiers: MenuItemCreateNestedManyWithoutMenuItemsInput
+  modifierGroupIDs: JSON
+  orders: OrderCreateNestedManyWithoutMenuItemsInput
+  organization: OrganizationCreateNestedManyWithoutMenuItemsInput
+  paymentModes: JSON!
+  price: Float!
+  quantity: ItemQuantityWhereUniqueInput
+  quotes: QuoteCreateNestedManyWithoutMenuItemsInput
+  rating: Float
+  searches: SearchCreateNestedManyWithoutMenuItemsInput
+  selectedModifiers: MenuItemCreateNestedManyWithoutMenuItemsInput
+  sellers: SellerWhereUniqueInput
+  timeToLive: DateTime!
+}
+
+input MenuItemCreateNestedManyWithoutMenuItemsInput {
+  connect: [MenuItemWhereUniqueInput!]
+}
+
+input MenuItemCreateNestedManyWithoutOrdersInput {
+  connect: [MenuItemWhereUniqueInput!]
+}
+
+input MenuItemCreateNestedManyWithoutOrganizationsInput {
+  connect: [MenuItemWhereUniqueInput!]
+}
+
+input MenuItemCreateNestedManyWithoutQuotesInput {
+  connect: [MenuItemWhereUniqueInput!]
+}
+
+input MenuItemCreateNestedManyWithoutSellersInput {
+  connect: [MenuItemWhereUniqueInput!]
+}
+
+input MenuItemListRelationFilter {
+  every: MenuItemWhereInput
+  none: MenuItemWhereInput
+  some: MenuItemWhereInput
+}
+
+input MenuItemOrderByInput {
+  createdAt: SortOrder
+  currencyCode: SortOrder
+  fulfillmentModes: SortOrder
+  id: SortOrder
+  isRateable: SortOrder
+  locationIDs: SortOrder
+  modifierGroupIDs: SortOrder
+  paymentModes: SortOrder
+  price: SortOrder
+  quantityId: SortOrder
+  rating: SortOrder
+  sellersId: SortOrder
+  timeToLive: SortOrder
+  updatedAt: SortOrder
+}
+
+input MenuItemUpdateInput {
+  currencyCode: String
+  fulfillmentModes: [EnumMenuItemFulfillmentModes!]
+  images: ImageUpdateManyWithoutMenuItemsInput
+  isRateable: Boolean
+  locationIDs: JSON
+  mediaFile: MediaFileUpdateManyWithoutMenuItemsInput
+  menuItemsSelectedModifiers: MenuItemUpdateManyWithoutMenuItemsInput
+  modifierGroupIDs: JSON
+  orders: OrderUpdateManyWithoutMenuItemsInput
+  organization: OrganizationUpdateManyWithoutMenuItemsInput
+  paymentModes: JSON
+  price: Float
+  quantity: ItemQuantityWhereUniqueInput
+  quotes: QuoteUpdateManyWithoutMenuItemsInput
+  rating: Float
+  searches: SearchUpdateManyWithoutMenuItemsInput
+  selectedModifiers: MenuItemUpdateManyWithoutMenuItemsInput
+  sellers: SellerWhereUniqueInput
+  timeToLive: DateTime
+}
+
+input MenuItemUpdateManyWithoutMenuItemsInput {
+  connect: [MenuItemWhereUniqueInput!]
+  disconnect: [MenuItemWhereUniqueInput!]
+  set: [MenuItemWhereUniqueInput!]
+}
+
+input MenuItemUpdateManyWithoutOrdersInput {
+  connect: [MenuItemWhereUniqueInput!]
+  disconnect: [MenuItemWhereUniqueInput!]
+  set: [MenuItemWhereUniqueInput!]
+}
+
+input MenuItemUpdateManyWithoutOrganizationsInput {
+  connect: [MenuItemWhereUniqueInput!]
+  disconnect: [MenuItemWhereUniqueInput!]
+  set: [MenuItemWhereUniqueInput!]
+}
+
+input MenuItemUpdateManyWithoutQuotesInput {
+  connect: [MenuItemWhereUniqueInput!]
+  disconnect: [MenuItemWhereUniqueInput!]
+  set: [MenuItemWhereUniqueInput!]
+}
+
+input MenuItemUpdateManyWithoutSellersInput {
+  connect: [MenuItemWhereUniqueInput!]
+  disconnect: [MenuItemWhereUniqueInput!]
+  set: [MenuItemWhereUniqueInput!]
+}
+
+input MenuItemWhereInput {
+  currencyCode: StringFilter
+  id: StringFilter
+  images: ImageListRelationFilter
+  isRateable: BooleanFilter
+  locationIDs: JsonFilter
+  mediaFile: MediaFileListRelationFilter
+  menuItemsSelectedModifiers: MenuItemListRelationFilter
+  modifierGroupIDs: JsonFilter
+  orders: OrderListRelationFilter
+  organization: OrganizationListRelationFilter
+  paymentModes: JsonFilter
+  price: FloatFilter
+  quotes: QuoteListRelationFilter
+  rating: FloatNullableFilter
+  searches: SearchListRelationFilter
+  selectedModifiers: MenuItemListRelationFilter
+  sellers: SellerWhereUniqueInput
+  timeToLive: DateTimeFilter
+}
+
+input MenuItemWhereUniqueInput {
+  id: String!
+}
+
+input MenuListRelationFilter {
+  every: MenuWhereInput
+  none: MenuWhereInput
+  some: MenuWhereInput
+}
+
+input MenuOrderByInput {
+  categoryIDs: SortOrder
+  createdAt: SortOrder
+  fulfillmentModes: SortOrder
+  id: SortOrder
+  name: SortOrder
+  sellerId: SortOrder
+  updatedAt: SortOrder
+}
+
+input MenuUpdateInput {
+  categoryIDs: JSON
+  fulfillmentModes: [EnumMenuFulfillmentModes!]
+  hourIntervals: HourIntervalUpdateManyWithoutMenusInput
+  name: String
+  seller: SellerWhereUniqueInput
+}
+
+input MenuUpdateManyWithoutSellersInput {
+  connect: [MenuWhereUniqueInput!]
+  disconnect: [MenuWhereUniqueInput!]
+  set: [MenuWhereUniqueInput!]
+}
+
+input MenuWhereInput {
+  categoryIDs: JsonFilter
+  hourIntervals: HourIntervalListRelationFilter
+  id: StringFilter
+  name: StringFilter
+  seller: SellerWhereUniqueInput
+}
+
+input MenuWhereUniqueInput {
+  id: String!
+}
+
+type MetaQueryPayload {
+  count: Float!
+}
+
+type ModifierGroup {
+  createdAt: DateTime!
+  id: String!
+  maximumPerModifierSelectionQuantity: Float!
+  maximumSelections: Float!
+  menuItemIDs: JSON!
+  minimumSelections: Float!
+  sellerModifierGroups: Seller
+  updatedAt: DateTime!
+}
+
+input ModifierGroupCreateInput {
+  maximumPerModifierSelectionQuantity: Float!
+  maximumSelections: Float!
+  menuItemIDs: JSON!
+  minimumSelections: Float!
+  sellerModifierGroups: SellerWhereUniqueInput
+}
+
+input ModifierGroupCreateNestedManyWithoutSellersInput {
+  connect: [ModifierGroupWhereUniqueInput!]
+}
+
+input ModifierGroupListRelationFilter {
+  every: ModifierGroupWhereInput
+  none: ModifierGroupWhereInput
+  some: ModifierGroupWhereInput
+}
+
+input ModifierGroupOrderByInput {
+  createdAt: SortOrder
+  id: SortOrder
+  maximumPerModifierSelectionQuantity: SortOrder
+  maximumSelections: SortOrder
+  menuItemIDs: SortOrder
+  minimumSelections: SortOrder
+  sellerModifierGroupsId: SortOrder
+  updatedAt: SortOrder
+}
+
+input ModifierGroupUpdateInput {
+  maximumPerModifierSelectionQuantity: Float
+  maximumSelections: Float
+  menuItemIDs: JSON
+  minimumSelections: Float
+  sellerModifierGroups: SellerWhereUniqueInput
+}
+
+input ModifierGroupUpdateManyWithoutSellersInput {
+  connect: [ModifierGroupWhereUniqueInput!]
+  disconnect: [ModifierGroupWhereUniqueInput!]
+  set: [ModifierGroupWhereUniqueInput!]
+}
+
+input ModifierGroupWhereInput {
+  id: StringFilter
+  maximumPerModifierSelectionQuantity: IntFilter
+  maximumSelections: IntFilter
+  menuItemIDs: JsonFilter
+  minimumSelections: IntFilter
+  sellerModifierGroups: SellerWhereUniqueInput
+}
+
+input ModifierGroupWhereUniqueInput {
+  id: String!
+}
+
+type Mutation {
+  createBazaar(data: BazaarCreateInput!): Bazaar!
+  createBilling(data: BillingCreateInput!): Billing!
+  createCancellation(data: CancellationCreateInput!): Cancellation!
+  createCategory(data: CategoryCreateInput!): Category!
+  createCondition(data: ConditionCreateInput!): Condition!
+  createContact(data: ContactCreateInput!): Contact!
+  createCourier(data: CourierCreateInput!): Courier!
+  createFulfillmentSpecification(data: FulfillmentSpecificationCreateInput!): FulfillmentSpecification!
+  createHourInterval(data: HourIntervalCreateInput!): HourInterval!
+  createImage(data: ImageCreateInput!): Image!
+  createIndividual(data: IndividualCreateInput!): Individual!
+  createItemQuantity(data: ItemQuantityCreateInput!): ItemQuantity!
+  createLocation(data: LocationCreateInput!): Location!
+  createMediaFile(data: MediaFileCreateInput!): MediaFile!
+  createMenu(data: MenuCreateInput!): Menu!
+  createMenuItem(data: MenuItemCreateInput!): MenuItem!
+  createModifierGroup(data: ModifierGroupCreateInput!): ModifierGroup!
+  createNode(data: NodeCreateInput!): Node!
+  createOrder(data: OrderCreateInput!): Order!
+  createOrganization(data: OrganizationCreateInput!): Organization!
+  createPaymentSource(data: PaymentSourceCreateInput!): PaymentSource!
+  createPaymentTerm(data: PaymentTermCreateInput!): PaymentTerm!
+  createPromotion(data: PromotionCreateInput!): Promotion!
+  createQuote(data: QuoteCreateInput!): Quote!
+  createRating(data: RatingCreateInput!): Rating!
+  createScalar(data: ScalarCreateInput!): Scalar!
+  createSearch(data: SearchCreateInput!): Search!
+  createSeller(data: SellerCreateInput!): Seller!
+  createSupport(data: SupportCreateInput!): Support!
+  createTracking(data: TrackingCreateInput!): Tracking!
+  createUser(data: UserCreateInput!): User!
+  createVehicle(data: VehicleCreateInput!): Vehicle!
+  createWaypoint(data: WaypointCreateInput!): Waypoint!
+  deleteBazaar(where: BazaarWhereUniqueInput!): Bazaar!
+  deleteBilling(where: BillingWhereUniqueInput!): Billing!
+  deleteCancellation(where: CancellationWhereUniqueInput!): Cancellation!
+  deleteCategory(where: CategoryWhereUniqueInput!): Category!
+  deleteCondition(where: ConditionWhereUniqueInput!): Condition!
+  deleteContact(where: ContactWhereUniqueInput!): Contact!
+  deleteCourier(where: CourierWhereUniqueInput!): Courier!
+  deleteFulfillmentSpecification(where: FulfillmentSpecificationWhereUniqueInput!): FulfillmentSpecification!
+  deleteHourInterval(where: HourIntervalWhereUniqueInput!): HourInterval!
+  deleteImage(where: ImageWhereUniqueInput!): Image!
+  deleteIndividual(where: IndividualWhereUniqueInput!): Individual!
+  deleteItemQuantity(where: ItemQuantityWhereUniqueInput!): ItemQuantity!
+  deleteLocation(where: LocationWhereUniqueInput!): Location!
+  deleteMediaFile(where: MediaFileWhereUniqueInput!): MediaFile!
+  deleteMenu(where: MenuWhereUniqueInput!): Menu!
+  deleteMenuItem(where: MenuItemWhereUniqueInput!): MenuItem!
+  deleteModifierGroup(where: ModifierGroupWhereUniqueInput!): ModifierGroup!
+  deleteNode(where: NodeWhereUniqueInput!): Node!
+  deleteOrder(where: OrderWhereUniqueInput!): Order!
+  deleteOrganization(where: OrganizationWhereUniqueInput!): Organization!
+  deletePaymentSource(where: PaymentSourceWhereUniqueInput!): PaymentSource!
+  deletePaymentTerm(where: PaymentTermWhereUniqueInput!): PaymentTerm!
+  deletePromotion(where: PromotionWhereUniqueInput!): Promotion!
+  deleteQuote(where: QuoteWhereUniqueInput!): Quote!
+  deleteRating(where: RatingWhereUniqueInput!): Rating!
+  deleteScalar(where: ScalarWhereUniqueInput!): Scalar!
+  deleteSearch(where: SearchWhereUniqueInput!): Search!
+  deleteSeller(where: SellerWhereUniqueInput!): Seller!
+  deleteSupport(where: SupportWhereUniqueInput!): Support!
+  deleteTracking(where: TrackingWhereUniqueInput!): Tracking!
+  deleteUser(where: UserWhereUniqueInput!): User!
+  deleteVehicle(where: VehicleWhereUniqueInput!): Vehicle!
+  deleteWaypoint(where: WaypointWhereUniqueInput!): Waypoint!
+  login(credentials: Credentials!): UserInfo!
+  updateBazaar(data: BazaarUpdateInput!, where: BazaarWhereUniqueInput!): Bazaar!
+  updateBilling(data: BillingUpdateInput!, where: BillingWhereUniqueInput!): Billing!
+  updateCancellation(data: CancellationUpdateInput!, where: CancellationWhereUniqueInput!): Cancellation!
+  updateCategory(data: CategoryUpdateInput!, where: CategoryWhereUniqueInput!): Category!
+  updateCondition(data: ConditionUpdateInput!, where: ConditionWhereUniqueInput!): Condition!
+  updateContact(data: ContactUpdateInput!, where: ContactWhereUniqueInput!): Contact!
+  updateCourier(data: CourierUpdateInput!, where: CourierWhereUniqueInput!): Courier!
+  updateFulfillmentSpecification(data: FulfillmentSpecificationUpdateInput!, where: FulfillmentSpecificationWhereUniqueInput!): FulfillmentSpecification!
+  updateHourInterval(data: HourIntervalUpdateInput!, where: HourIntervalWhereUniqueInput!): HourInterval!
+  updateImage(data: ImageUpdateInput!, where: ImageWhereUniqueInput!): Image!
+  updateIndividual(data: IndividualUpdateInput!, where: IndividualWhereUniqueInput!): Individual!
+  updateItemQuantity(data: ItemQuantityUpdateInput!, where: ItemQuantityWhereUniqueInput!): ItemQuantity!
+  updateLocation(data: LocationUpdateInput!, where: LocationWhereUniqueInput!): Location!
+  updateMediaFile(data: MediaFileUpdateInput!, where: MediaFileWhereUniqueInput!): MediaFile!
+  updateMenu(data: MenuUpdateInput!, where: MenuWhereUniqueInput!): Menu!
+  updateMenuItem(data: MenuItemUpdateInput!, where: MenuItemWhereUniqueInput!): MenuItem!
+  updateModifierGroup(data: ModifierGroupUpdateInput!, where: ModifierGroupWhereUniqueInput!): ModifierGroup!
+  updateNode(data: NodeUpdateInput!, where: NodeWhereUniqueInput!): Node!
+  updateOrder(data: OrderUpdateInput!, where: OrderWhereUniqueInput!): Order!
+  updateOrganization(data: OrganizationUpdateInput!, where: OrganizationWhereUniqueInput!): Organization!
+  updatePaymentSource(data: PaymentSourceUpdateInput!, where: PaymentSourceWhereUniqueInput!): PaymentSource!
+  updatePaymentTerm(data: PaymentTermUpdateInput!, where: PaymentTermWhereUniqueInput!): PaymentTerm!
+  updatePromotion(data: PromotionUpdateInput!, where: PromotionWhereUniqueInput!): Promotion!
+  updateQuote(data: QuoteUpdateInput!, where: QuoteWhereUniqueInput!): Quote!
+  updateRating(data: RatingUpdateInput!, where: RatingWhereUniqueInput!): Rating!
+  updateScalar(data: ScalarUpdateInput!, where: ScalarWhereUniqueInput!): Scalar!
+  updateSearch(data: SearchUpdateInput!, where: SearchWhereUniqueInput!): Search!
+  updateSeller(data: SellerUpdateInput!, where: SellerWhereUniqueInput!): Seller!
+  updateSupport(data: SupportUpdateInput!, where: SupportWhereUniqueInput!): Support!
+  updateTracking(data: TrackingUpdateInput!, where: TrackingWhereUniqueInput!): Tracking!
+  updateUser(data: UserUpdateInput!, where: UserWhereUniqueInput!): User!
+  updateVehicle(data: VehicleUpdateInput!, where: VehicleWhereUniqueInput!): Vehicle!
+  updateWaypoint(data: WaypointUpdateInput!, where: WaypointWhereUniqueInput!): Waypoint!
+}
+
+type Node {
+  createdAt: DateTime!
+  hostUrl: String!
+  id: Float!
+  industryCode: EnumNodeIndustryCode
+  location(orderBy: [LocationOrderByInput!], skip: Float, take: Float, where: LocationWhereInput): [Location!]!
+  operatorType: EnumNodeOperatorType
+  updatedAt: DateTime!
+}
+
+input NodeCreateInput {
+  hostUrl: String!
+  industryCode: EnumNodeIndustryCode!
+  location: LocationCreateNestedManyWithoutNodesInput
+  operatorType: EnumNodeOperatorType!
+}
+
+input NodeOrderByInput {
+  createdAt: SortOrder
+  hostUrl: SortOrder
+  id: SortOrder
+  industryCode: SortOrder
+  operatorType: SortOrder
+  updatedAt: SortOrder
+}
+
+input NodeUpdateInput {
+  hostUrl: String
+  industryCode: EnumNodeIndustryCode
+  location: LocationUpdateManyWithoutNodesInput
+  operatorType: EnumNodeOperatorType
+}
+
+input NodeWhereInput {
+  hostUrl: StringFilter
+  id: IntFilter
+  industryCode: EnumNodeIndustryCode
+  location: LocationListRelationFilter
+  operatorType: EnumNodeOperatorType
+}
+
+input NodeWhereUniqueInput {
+  id: Float!
+}
+
+type Order {
+  billing: Billing
+  cancellation: Cancellation
+  createdAt: DateTime!
+  fulfillmentSpecification: FulfillmentSpecification
+  id: String!
+  menuItems(orderBy: [MenuItemOrderByInput!], skip: Float, take: Float, where: MenuItemWhereInput): [MenuItem!]!
+  paymentTerm: PaymentTerm
+  promotion(orderBy: [PromotionOrderByInput!], skip: Float, take: Float, where: PromotionWhereInput): [Promotion!]!
+  referenceOrderIds: String
+  status: EnumOrderStatus
+  updatedAt: DateTime!
+}
+
+input OrderCreateInput {
+  billing: BillingWhereUniqueInput!
+  cancellation: CancellationWhereUniqueInput
+  fulfillmentSpecification: FulfillmentSpecificationWhereUniqueInput!
+  menuItems: MenuItemCreateNestedManyWithoutOrdersInput
+  paymentTerm: PaymentTermWhereUniqueInput
+  promotion: PromotionCreateNestedManyWithoutOrdersInput
+  referenceOrderIds: String
+  status: EnumOrderStatus!
+}
+
+input OrderCreateNestedManyWithoutBillingsInput {
+  connect: [OrderWhereUniqueInput!]
+}
+
+input OrderCreateNestedManyWithoutFulfillmentSpecificationsInput {
+  connect: [OrderWhereUniqueInput!]
+}
+
+input OrderCreateNestedManyWithoutMenuItemsInput {
+  connect: [OrderWhereUniqueInput!]
+}
+
+input OrderCreateNestedManyWithoutPromotionsInput {
+  connect: [OrderWhereUniqueInput!]
+}
+
+input OrderListRelationFilter {
+  every: OrderWhereInput
+  none: OrderWhereInput
+  some: OrderWhereInput
+}
+
+input OrderOrderByInput {
+  billingId: SortOrder
+  cancellationId: SortOrder
+  createdAt: SortOrder
+  fulfillmentSpecificationId: SortOrder
+  id: SortOrder
+  paymentTermId: SortOrder
+  referenceOrderIds: SortOrder
+  status: SortOrder
+  updatedAt: SortOrder
+}
+
+input OrderUpdateInput {
+  billing: BillingWhereUniqueInput
+  cancellation: CancellationWhereUniqueInput
+  fulfillmentSpecification: FulfillmentSpecificationWhereUniqueInput
+  menuItems: MenuItemUpdateManyWithoutOrdersInput
+  paymentTerm: PaymentTermWhereUniqueInput
+  promotion: PromotionUpdateManyWithoutOrdersInput
+  referenceOrderIds: String
+  status: EnumOrderStatus
+}
+
+input OrderUpdateManyWithoutBillingsInput {
+  connect: [OrderWhereUniqueInput!]
+  disconnect: [OrderWhereUniqueInput!]
+  set: [OrderWhereUniqueInput!]
+}
+
+input OrderUpdateManyWithoutFulfillmentSpecificationsInput {
+  connect: [OrderWhereUniqueInput!]
+  disconnect: [OrderWhereUniqueInput!]
+  set: [OrderWhereUniqueInput!]
+}
+
+input OrderUpdateManyWithoutMenuItemsInput {
+  connect: [OrderWhereUniqueInput!]
+  disconnect: [OrderWhereUniqueInput!]
+  set: [OrderWhereUniqueInput!]
+}
+
+input OrderUpdateManyWithoutPromotionsInput {
+  connect: [OrderWhereUniqueInput!]
+  disconnect: [OrderWhereUniqueInput!]
+  set: [OrderWhereUniqueInput!]
+}
+
+input OrderWhereInput {
+  billing: BillingWhereUniqueInput
+  cancellation: CancellationWhereUniqueInput
+  fulfillmentSpecification: FulfillmentSpecificationWhereUniqueInput
+  id: StringFilter
+  menuItems: MenuItemListRelationFilter
+  paymentTerm: PaymentTermWhereUniqueInput
+  promotion: PromotionListRelationFilter
+  referenceOrderIds: StringNullableFilter
+  status: EnumOrderStatus
+}
+
+input OrderWhereUniqueInput {
+  id: String!
+}
+
+type Organization {
+  address: String!
+  billings(orderBy: [BillingOrderByInput!], skip: Float, take: Float, where: BillingWhereInput): [Billing!]!
+  contact(orderBy: [ContactOrderByInput!], skip: Float, take: Float, where: ContactWhereInput): [Contact!]!
+  couriers(orderBy: [CourierOrderByInput!], skip: Float, take: Float, where: CourierWhereInput): [Courier!]!
+  createdAt: DateTime!
+  id: String!
+  location(orderBy: [LocationOrderByInput!], skip: Float, take: Float, where: LocationWhereInput): [Location!]!
+  menuItems(orderBy: [MenuItemOrderByInput!], skip: Float, take: Float, where: MenuItemWhereInput): [MenuItem!]!
+  updatedAt: DateTime!
+}
+
+input OrganizationCreateInput {
+  address: String!
+  billings: BillingCreateNestedManyWithoutOrganizationsInput
+  contact: ContactCreateNestedManyWithoutOrganizationsInput
+  couriers: CourierCreateNestedManyWithoutOrganizationsInput
+  location: LocationCreateNestedManyWithoutOrganizationsInput
+  menuItems: MenuItemCreateNestedManyWithoutOrganizationsInput
+}
+
+input OrganizationCreateNestedManyWithoutContactsInput {
+  connect: [OrganizationWhereUniqueInput!]
+}
+
+input OrganizationCreateNestedManyWithoutCouriersInput {
+  connect: [OrganizationWhereUniqueInput!]
+}
+
+input OrganizationCreateNestedManyWithoutMenuItemsInput {
+  connect: [OrganizationWhereUniqueInput!]
+}
+
+input OrganizationListRelationFilter {
+  every: OrganizationWhereInput
+  none: OrganizationWhereInput
+  some: OrganizationWhereInput
+}
+
+input OrganizationOrderByInput {
+  address: SortOrder
+  createdAt: SortOrder
+  id: SortOrder
+  updatedAt: SortOrder
+}
+
+input OrganizationUpdateInput {
+  address: String
+  billings: BillingUpdateManyWithoutOrganizationsInput
+  contact: ContactUpdateManyWithoutOrganizationsInput
+  couriers: CourierUpdateManyWithoutOrganizationsInput
+  location: LocationUpdateManyWithoutOrganizationsInput
+  menuItems: MenuItemUpdateManyWithoutOrganizationsInput
+}
+
+input OrganizationUpdateManyWithoutContactsInput {
+  connect: [OrganizationWhereUniqueInput!]
+  disconnect: [OrganizationWhereUniqueInput!]
+  set: [OrganizationWhereUniqueInput!]
+}
+
+input OrganizationUpdateManyWithoutCouriersInput {
+  connect: [OrganizationWhereUniqueInput!]
+  disconnect: [OrganizationWhereUniqueInput!]
+  set: [OrganizationWhereUniqueInput!]
+}
+
+input OrganizationUpdateManyWithoutMenuItemsInput {
+  connect: [OrganizationWhereUniqueInput!]
+  disconnect: [OrganizationWhereUniqueInput!]
+  set: [OrganizationWhereUniqueInput!]
+}
+
+input OrganizationWhereInput {
+  address: StringFilter
+  billings: BillingListRelationFilter
+  contact: ContactListRelationFilter
+  couriers: CourierListRelationFilter
+  id: StringFilter
+  location: LocationListRelationFilter
+  menuItems: MenuItemListRelationFilter
+}
+
+input OrganizationWhereUniqueInput {
+  id: String!
+}
+
+type PaymentSource {
+  addressCity: String!
+  addressCountry: String!
+  addressLine_1: String!
+  addressLine_2: String!
+  addressState: String!
+  addressZip: String!
+  cardNumber: String!
+  createdAt: DateTime!
+  currencyCode: String!
+  cvc: Float!
+  expirationMonth: Float!
+  expirationYear: Float!
+  id: String!
+  name: String!
+  payments(orderBy: [PaymentTermOrderByInput!], skip: Float, take: Float, where: PaymentTermWhereInput): [PaymentTerm!]!
+  updatedAt: DateTime!
+  users: User
+}
+
+input PaymentSourceCreateInput {
+  addressCity: String!
+  addressCountry: String!
+  addressLine_1: String!
+  addressLine_2: String!
+  addressState: String!
+  addressZip: String!
+  cardNumber: String!
+  currencyCode: String!
+  cvc: Float!
+  expirationMonth: Float!
+  expirationYear: Float!
+  name: String!
+  payments: PaymentTermCreateNestedManyWithoutPaymentSourcesInput
+  users: UserWhereUniqueInput
+}
+
+input PaymentSourceCreateNestedManyWithoutUsersInput {
+  connect: [PaymentSourceWhereUniqueInput!]
+}
+
+input PaymentSourceListRelationFilter {
+  every: PaymentSourceWhereInput
+  none: PaymentSourceWhereInput
+  some: PaymentSourceWhereInput
+}
+
+input PaymentSourceOrderByInput {
+  addressCity: SortOrder
+  addressCountry: SortOrder
+  addressLine_1: SortOrder
+  addressLine_2: SortOrder
+  addressState: SortOrder
+  addressZip: SortOrder
+  cardNumber: SortOrder
+  createdAt: SortOrder
+  currencyCode: SortOrder
+  cvc: SortOrder
+  expirationMonth: SortOrder
+  expirationYear: SortOrder
+  id: SortOrder
+  name: SortOrder
+  updatedAt: SortOrder
+  usersId: SortOrder
+}
+
+input PaymentSourceUpdateInput {
+  addressCity: String
+  addressCountry: String
+  addressLine_1: String
+  addressLine_2: String
+  addressState: String
+  addressZip: String
+  cardNumber: String
+  currencyCode: String
+  cvc: Float
+  expirationMonth: Float
+  expirationYear: Float
+  name: String
+  payments: PaymentTermUpdateManyWithoutPaymentSourcesInput
+  users: UserWhereUniqueInput
+}
+
+input PaymentSourceUpdateManyWithoutUsersInput {
+  connect: [PaymentSourceWhereUniqueInput!]
+  disconnect: [PaymentSourceWhereUniqueInput!]
+  set: [PaymentSourceWhereUniqueInput!]
+}
+
+input PaymentSourceWhereInput {
+  addressCity: StringFilter
+  addressCountry: StringFilter
+  addressLine_1: StringFilter
+  addressLine_2: StringFilter
+  addressState: StringFilter
+  addressZip: StringFilter
+  cardNumber: StringFilter
+  currencyCode: StringFilter
+  cvc: IntFilter
+  expirationMonth: IntFilter
+  expirationYear: IntFilter
+  id: StringFilter
+  name: StringFilter
+  payments: PaymentTermListRelationFilter
+  users: UserWhereUniqueInput
+}
+
+input PaymentSourceWhereUniqueInput {
+  id: String!
+}
+
+type PaymentTerm {
+  bazaar: Bazaar
+  collectedBy: EnumPaymentTermCollectedBy
+  createdAt: DateTime!
+  id: String!
+  lifecycleProcessing: EnumPaymentTermLifecycleProcessing
+  order: Order
+  paymentAmount: Float
+  paymentSource: PaymentSource
+  search: Search
+  seller: Seller
+  status: EnumPaymentTermStatus
+  updatedAt: DateTime!
+}
+
+input PaymentTermCreateInput {
+  bazaar: BazaarWhereUniqueInput
+  collectedBy: EnumPaymentTermCollectedBy!
+  lifecycleProcessing: EnumPaymentTermLifecycleProcessing!
+  order: OrderWhereUniqueInput
+  paymentAmount: Float
+  paymentSource: PaymentSourceWhereUniqueInput
+  search: SearchWhereUniqueInput
+  seller: SellerWhereUniqueInput
+  status: EnumPaymentTermStatus!
+}
+
+input PaymentTermCreateNestedManyWithoutPaymentSourcesInput {
+  connect: [PaymentTermWhereUniqueInput!]
+}
+
+input PaymentTermListRelationFilter {
+  every: PaymentTermWhereInput
+  none: PaymentTermWhereInput
+  some: PaymentTermWhereInput
+}
+
+input PaymentTermOrderByInput {
+  bazaarId: SortOrder
+  collectedBy: SortOrder
+  createdAt: SortOrder
+  id: SortOrder
+  lifecycleProcessing: SortOrder
+  orderId: SortOrder
+  paymentAmount: SortOrder
+  paymentSourceId: SortOrder
+  searchId: SortOrder
+  sellerId: SortOrder
+  status: SortOrder
+  updatedAt: SortOrder
+}
+
+input PaymentTermUpdateInput {
+  bazaar: BazaarWhereUniqueInput
+  collectedBy: EnumPaymentTermCollectedBy
+  lifecycleProcessing: EnumPaymentTermLifecycleProcessing
+  order: OrderWhereUniqueInput
+  paymentAmount: Float
+  paymentSource: PaymentSourceWhereUniqueInput
+  search: SearchWhereUniqueInput
+  seller: SellerWhereUniqueInput
+  status: EnumPaymentTermStatus
+}
+
+input PaymentTermUpdateManyWithoutPaymentSourcesInput {
+  connect: [PaymentTermWhereUniqueInput!]
+  disconnect: [PaymentTermWhereUniqueInput!]
+  set: [PaymentTermWhereUniqueInput!]
+}
+
+input PaymentTermWhereInput {
+  bazaar: BazaarWhereUniqueInput
+  collectedBy: EnumPaymentTermCollectedBy
+  id: StringFilter
+  lifecycleProcessing: EnumPaymentTermLifecycleProcessing
+  order: OrderWhereUniqueInput
+  paymentAmount: IntNullableFilter
+  search: SearchWhereUniqueInput
+  status: EnumPaymentTermStatus
+}
+
+input PaymentTermWhereUniqueInput {
+  id: String!
+}
+
+type Promotion {
+  amount: Float
+  bazaar: Bazaar
+  createdAt: DateTime!
+  expirationDate: DateTime
+  id: String!
+  locations(orderBy: [LocationOrderByInput!], skip: Float, take: Float, where: LocationWhereInput): [Location!]!
+  maximumPurchase: Float
+  minimumPurchase: Float!
+  name: String!
+  orders(orderBy: [OrderOrderByInput!], skip: Float, take: Float, where: OrderWhereInput): [Order!]!
+  percentage: Float
+  search: Search
+  seller: Seller
+  updatedAt: DateTime!
+}
+
+input PromotionCreateInput {
+  amount: Float
+  bazaar: BazaarWhereUniqueInput
+  expirationDate: DateTime
+  locations: LocationCreateNestedManyWithoutPromotionsInput
+  maximumPurchase: Float
+  minimumPurchase: Float!
+  name: String!
+  orders: OrderCreateNestedManyWithoutPromotionsInput
+  percentage: Float
+  search: SearchWhereUniqueInput
+  seller: SellerWhereUniqueInput
+}
+
+input PromotionCreateNestedManyWithoutBazaarsInput {
+  connect: [PromotionWhereUniqueInput!]
+}
+
+input PromotionCreateNestedManyWithoutLocationsInput {
+  connect: [PromotionWhereUniqueInput!]
+}
+
+input PromotionCreateNestedManyWithoutOrdersInput {
+  connect: [PromotionWhereUniqueInput!]
+}
+
+input PromotionCreateNestedManyWithoutSearchesInput {
+  connect: [PromotionWhereUniqueInput!]
+}
+
+input PromotionCreateNestedManyWithoutSellersInput {
+  connect: [PromotionWhereUniqueInput!]
+}
+
+input PromotionListRelationFilter {
+  every: PromotionWhereInput
+  none: PromotionWhereInput
+  some: PromotionWhereInput
+}
+
+input PromotionOrderByInput {
+  amount: SortOrder
+  bazaarId: SortOrder
+  createdAt: SortOrder
+  expirationDate: SortOrder
+  id: SortOrder
+  maximumPurchase: SortOrder
+  minimumPurchase: SortOrder
+  name: SortOrder
+  percentage: SortOrder
+  searchId: SortOrder
+  sellerId: SortOrder
+  updatedAt: SortOrder
+}
+
+input PromotionUpdateInput {
+  amount: Float
+  bazaar: BazaarWhereUniqueInput
+  expirationDate: DateTime
+  locations: LocationUpdateManyWithoutPromotionsInput
+  maximumPurchase: Float
+  minimumPurchase: Float
+  name: String
+  orders: OrderUpdateManyWithoutPromotionsInput
+  percentage: Float
+  search: SearchWhereUniqueInput
+  seller: SellerWhereUniqueInput
+}
+
+input PromotionUpdateManyWithoutBazaarsInput {
+  connect: [PromotionWhereUniqueInput!]
+  disconnect: [PromotionWhereUniqueInput!]
+  set: [PromotionWhereUniqueInput!]
+}
+
+input PromotionUpdateManyWithoutLocationsInput {
+  connect: [PromotionWhereUniqueInput!]
+  disconnect: [PromotionWhereUniqueInput!]
+  set: [PromotionWhereUniqueInput!]
+}
+
+input PromotionUpdateManyWithoutOrdersInput {
+  connect: [PromotionWhereUniqueInput!]
+  disconnect: [PromotionWhereUniqueInput!]
+  set: [PromotionWhereUniqueInput!]
+}
+
+input PromotionUpdateManyWithoutSearchesInput {
+  connect: [PromotionWhereUniqueInput!]
+  disconnect: [PromotionWhereUniqueInput!]
+  set: [PromotionWhereUniqueInput!]
+}
+
+input PromotionUpdateManyWithoutSellersInput {
+  connect: [PromotionWhereUniqueInput!]
+  disconnect: [PromotionWhereUniqueInput!]
+  set: [PromotionWhereUniqueInput!]
+}
+
+input PromotionWhereInput {
+  amount: FloatNullableFilter
+  bazaar: BazaarWhereUniqueInput
+  expirationDate: DateTimeNullableFilter
+  id: StringFilter
+  locations: LocationListRelationFilter
+  maximumPurchase: FloatNullableFilter
+  minimumPurchase: FloatFilter
+  name: StringFilter
+  orders: OrderListRelationFilter
+  percentage: FloatNullableFilter
+  search: SearchWhereUniqueInput
+  seller: SellerWhereUniqueInput
+}
+
+input PromotionWhereUniqueInput {
+  id: String!
+}
+
+type Query {
+  _bazaarsMeta(orderBy: [BazaarOrderByInput!], skip: Float, take: Float, where: BazaarWhereInput): MetaQueryPayload!
+  _billingsMeta(orderBy: [BillingOrderByInput!], skip: Float, take: Float, where: BillingWhereInput): MetaQueryPayload!
+  _cancellationsMeta(orderBy: [CancellationOrderByInput!], skip: Float, take: Float, where: CancellationWhereInput): MetaQueryPayload!
+  _categoriesMeta(orderBy: [CategoryOrderByInput!], skip: Float, take: Float, where: CategoryWhereInput): MetaQueryPayload!
+  _conditionsMeta(orderBy: [ConditionOrderByInput!], skip: Float, take: Float, where: ConditionWhereInput): MetaQueryPayload!
+  _contactsMeta(orderBy: [ContactOrderByInput!], skip: Float, take: Float, where: ContactWhereInput): MetaQueryPayload!
+  _couriersMeta(orderBy: [CourierOrderByInput!], skip: Float, take: Float, where: CourierWhereInput): MetaQueryPayload!
+  _fulfillmentSpecificationsMeta(orderBy: [FulfillmentSpecificationOrderByInput!], skip: Float, take: Float, where: FulfillmentSpecificationWhereInput): MetaQueryPayload!
+  _hourIntervalsMeta(orderBy: [HourIntervalOrderByInput!], skip: Float, take: Float, where: HourIntervalWhereInput): MetaQueryPayload!
+  _imagesMeta(orderBy: [ImageOrderByInput!], skip: Float, take: Float, where: ImageWhereInput): MetaQueryPayload!
+  _individualsMeta(orderBy: [IndividualOrderByInput!], skip: Float, take: Float, where: IndividualWhereInput): MetaQueryPayload!
+  _itemQuantitiesMeta(orderBy: [ItemQuantityOrderByInput!], skip: Float, take: Float, where: ItemQuantityWhereInput): MetaQueryPayload!
+  _locationsMeta(orderBy: [LocationOrderByInput!], skip: Float, take: Float, where: LocationWhereInput): MetaQueryPayload!
+  _mediaFilesMeta(orderBy: [MediaFileOrderByInput!], skip: Float, take: Float, where: MediaFileWhereInput): MetaQueryPayload!
+  _menuItemsMeta(orderBy: [MenuItemOrderByInput!], skip: Float, take: Float, where: MenuItemWhereInput): MetaQueryPayload!
+  _menusMeta(orderBy: [MenuOrderByInput!], skip: Float, take: Float, where: MenuWhereInput): MetaQueryPayload!
+  _modifierGroupsMeta(orderBy: [ModifierGroupOrderByInput!], skip: Float, take: Float, where: ModifierGroupWhereInput): MetaQueryPayload!
+  _nodesMeta(orderBy: [NodeOrderByInput!], skip: Float, take: Float, where: NodeWhereInput): MetaQueryPayload!
+  _ordersMeta(orderBy: [OrderOrderByInput!], skip: Float, take: Float, where: OrderWhereInput): MetaQueryPayload!
+  _organizationsMeta(orderBy: [OrganizationOrderByInput!], skip: Float, take: Float, where: OrganizationWhereInput): MetaQueryPayload!
+  _paymentSourcesMeta(orderBy: [PaymentSourceOrderByInput!], skip: Float, take: Float, where: PaymentSourceWhereInput): MetaQueryPayload!
+  _paymentTermsMeta(orderBy: [PaymentTermOrderByInput!], skip: Float, take: Float, where: PaymentTermWhereInput): MetaQueryPayload!
+  _promotionsMeta(orderBy: [PromotionOrderByInput!], skip: Float, take: Float, where: PromotionWhereInput): MetaQueryPayload!
+  _quotesMeta(orderBy: [QuoteOrderByInput!], skip: Float, take: Float, where: QuoteWhereInput): MetaQueryPayload!
+  _ratingsMeta(orderBy: [RatingOrderByInput!], skip: Float, take: Float, where: RatingWhereInput): MetaQueryPayload!
+  _scalarsMeta(orderBy: [ScalarOrderByInput!], skip: Float, take: Float, where: ScalarWhereInput): MetaQueryPayload!
+  _searchesMeta(orderBy: [SearchOrderByInput!], skip: Float, take: Float, where: SearchWhereInput): MetaQueryPayload!
+  _sellersMeta(orderBy: [SellerOrderByInput!], skip: Float, take: Float, where: SellerWhereInput): MetaQueryPayload!
+  _supportsMeta(orderBy: [SupportOrderByInput!], skip: Float, take: Float, where: SupportWhereInput): MetaQueryPayload!
+  _trackingsMeta(orderBy: [TrackingOrderByInput!], skip: Float, take: Float, where: TrackingWhereInput): MetaQueryPayload!
+  _usersMeta(orderBy: [UserOrderByInput!], skip: Float, take: Float, where: UserWhereInput): MetaQueryPayload!
+  _vehiclesMeta(orderBy: [VehicleOrderByInput!], skip: Float, take: Float, where: VehicleWhereInput): MetaQueryPayload!
+  _waypointsMeta(orderBy: [WaypointOrderByInput!], skip: Float, take: Float, where: WaypointWhereInput): MetaQueryPayload!
+  bazaar(where: BazaarWhereUniqueInput!): Bazaar
+  bazaars(orderBy: [BazaarOrderByInput!], skip: Float, take: Float, where: BazaarWhereInput): [Bazaar!]!
+  billing(where: BillingWhereUniqueInput!): Billing
+  billings(orderBy: [BillingOrderByInput!], skip: Float, take: Float, where: BillingWhereInput): [Billing!]!
+  cancellation(where: CancellationWhereUniqueInput!): Cancellation
+  cancellations(orderBy: [CancellationOrderByInput!], skip: Float, take: Float, where: CancellationWhereInput): [Cancellation!]!
+  categories(orderBy: [CategoryOrderByInput!], skip: Float, take: Float, where: CategoryWhereInput): [Category!]!
+  category(where: CategoryWhereUniqueInput!): Category
+  condition(where: ConditionWhereUniqueInput!): Condition
+  conditions(orderBy: [ConditionOrderByInput!], skip: Float, take: Float, where: ConditionWhereInput): [Condition!]!
+  contact(where: ContactWhereUniqueInput!): Contact
+  contacts(orderBy: [ContactOrderByInput!], skip: Float, take: Float, where: ContactWhereInput): [Contact!]!
+  courier(where: CourierWhereUniqueInput!): Courier
+  couriers(orderBy: [CourierOrderByInput!], skip: Float, take: Float, where: CourierWhereInput): [Courier!]!
+  fulfillmentSpecification(where: FulfillmentSpecificationWhereUniqueInput!): FulfillmentSpecification
+  fulfillmentSpecifications(orderBy: [FulfillmentSpecificationOrderByInput!], skip: Float, take: Float, where: FulfillmentSpecificationWhereInput): [FulfillmentSpecification!]!
+  hourInterval(where: HourIntervalWhereUniqueInput!): HourInterval
+  hourIntervals(orderBy: [HourIntervalOrderByInput!], skip: Float, take: Float, where: HourIntervalWhereInput): [HourInterval!]!
+  image(where: ImageWhereUniqueInput!): Image
+  images(orderBy: [ImageOrderByInput!], skip: Float, take: Float, where: ImageWhereInput): [Image!]!
+  individual(where: IndividualWhereUniqueInput!): Individual
+  individuals(orderBy: [IndividualOrderByInput!], skip: Float, take: Float, where: IndividualWhereInput): [Individual!]!
+  itemQuantities(orderBy: [ItemQuantityOrderByInput!], skip: Float, take: Float, where: ItemQuantityWhereInput): [ItemQuantity!]!
+  itemQuantity(where: ItemQuantityWhereUniqueInput!): ItemQuantity
+  location(where: LocationWhereUniqueInput!): Location
+  locations(orderBy: [LocationOrderByInput!], skip: Float, take: Float, where: LocationWhereInput): [Location!]!
+  mediaFile(where: MediaFileWhereUniqueInput!): MediaFile
+  mediaFiles(orderBy: [MediaFileOrderByInput!], skip: Float, take: Float, where: MediaFileWhereInput): [MediaFile!]!
+  menu(where: MenuWhereUniqueInput!): Menu
+  menuItem(where: MenuItemWhereUniqueInput!): MenuItem
+  menuItems(orderBy: [MenuItemOrderByInput!], skip: Float, take: Float, where: MenuItemWhereInput): [MenuItem!]!
+  menus(orderBy: [MenuOrderByInput!], skip: Float, take: Float, where: MenuWhereInput): [Menu!]!
+  modifierGroup(where: ModifierGroupWhereUniqueInput!): ModifierGroup
+  modifierGroups(orderBy: [ModifierGroupOrderByInput!], skip: Float, take: Float, where: ModifierGroupWhereInput): [ModifierGroup!]!
+  node(where: NodeWhereUniqueInput!): Node
+  nodes(orderBy: [NodeOrderByInput!], skip: Float, take: Float, where: NodeWhereInput): [Node!]!
+  order(where: OrderWhereUniqueInput!): Order
+  orders(orderBy: [OrderOrderByInput!], skip: Float, take: Float, where: OrderWhereInput): [Order!]!
+  organization(where: OrganizationWhereUniqueInput!): Organization
+  organizations(orderBy: [OrganizationOrderByInput!], skip: Float, take: Float, where: OrganizationWhereInput): [Organization!]!
+  paymentSource(where: PaymentSourceWhereUniqueInput!): PaymentSource
+  paymentSources(orderBy: [PaymentSourceOrderByInput!], skip: Float, take: Float, where: PaymentSourceWhereInput): [PaymentSource!]!
+  paymentTerm(where: PaymentTermWhereUniqueInput!): PaymentTerm
+  paymentTerms(orderBy: [PaymentTermOrderByInput!], skip: Float, take: Float, where: PaymentTermWhereInput): [PaymentTerm!]!
+  promotion(where: PromotionWhereUniqueInput!): Promotion
+  promotions(orderBy: [PromotionOrderByInput!], skip: Float, take: Float, where: PromotionWhereInput): [Promotion!]!
+  quote(where: QuoteWhereUniqueInput!): Quote
+  quotes(orderBy: [QuoteOrderByInput!], skip: Float, take: Float, where: QuoteWhereInput): [Quote!]!
+  rating(where: RatingWhereUniqueInput!): Rating
+  ratings(orderBy: [RatingOrderByInput!], skip: Float, take: Float, where: RatingWhereInput): [Rating!]!
+  scalar(where: ScalarWhereUniqueInput!): Scalar
+  scalars(orderBy: [ScalarOrderByInput!], skip: Float, take: Float, where: ScalarWhereInput): [Scalar!]!
+  search(where: SearchWhereUniqueInput!): Search
+  searches(orderBy: [SearchOrderByInput!], skip: Float, take: Float, where: SearchWhereInput): [Search!]!
+  seller(where: SellerWhereUniqueInput!): Seller
+  sellers(orderBy: [SellerOrderByInput!], skip: Float, take: Float, where: SellerWhereInput): [Seller!]!
+  support(where: SupportWhereUniqueInput!): Support
+  supports(orderBy: [SupportOrderByInput!], skip: Float, take: Float, where: SupportWhereInput): [Support!]!
+  tracking(where: TrackingWhereUniqueInput!): Tracking
+  trackings(orderBy: [TrackingOrderByInput!], skip: Float, take: Float, where: TrackingWhereInput): [Tracking!]!
+  user(where: UserWhereUniqueInput!): User
+  userInfo: UserInfo!
+  users(orderBy: [UserOrderByInput!], skip: Float, take: Float, where: UserWhereInput): [User!]!
+  vehicle(where: VehicleWhereUniqueInput!): Vehicle
+  vehicles(orderBy: [VehicleOrderByInput!], skip: Float, take: Float, where: VehicleWhereInput): [Vehicle!]!
+  waypoint(where: WaypointWhereUniqueInput!): Waypoint
+  waypoints(orderBy: [WaypointOrderByInput!], skip: Float, take: Float, where: WaypointWhereInput): [Waypoint!]!
+}
+
+enum QueryMode {
+  Default
+  Insensitive
+}
+
+type Quote {
+  createdAt: DateTime!
+  currencyCode: String!
+  id: String!
+  menuItems(orderBy: [MenuItemOrderByInput!], skip: Float, take: Float, where: MenuItemWhereInput): [MenuItem!]!
+  timeToLive: Float!
+  totalPrice: Float!
+  updatedAt: DateTime!
+}
+
+input QuoteCreateInput {
+  currencyCode: String!
+  menuItems: MenuItemCreateNestedManyWithoutQuotesInput
+  timeToLive: Float!
+  totalPrice: Float!
+}
+
+input QuoteCreateNestedManyWithoutMenuItemsInput {
+  connect: [QuoteWhereUniqueInput!]
+}
+
+input QuoteListRelationFilter {
+  every: QuoteWhereInput
+  none: QuoteWhereInput
+  some: QuoteWhereInput
+}
+
+input QuoteOrderByInput {
+  createdAt: SortOrder
+  currencyCode: SortOrder
+  id: SortOrder
+  timeToLive: SortOrder
+  totalPrice: SortOrder
+  updatedAt: SortOrder
+}
+
+input QuoteUpdateInput {
+  currencyCode: String
+  menuItems: MenuItemUpdateManyWithoutQuotesInput
+  timeToLive: Float
+  totalPrice: Float
+}
+
+input QuoteUpdateManyWithoutMenuItemsInput {
+  connect: [QuoteWhereUniqueInput!]
+  disconnect: [QuoteWhereUniqueInput!]
+  set: [QuoteWhereUniqueInput!]
+}
+
+input QuoteWhereInput {
+  currencyCode: StringFilter
+  id: StringFilter
+  menuItems: MenuItemListRelationFilter
+  timeToLive: IntFilter
+  totalPrice: FloatFilter
+}
+
+input QuoteWhereUniqueInput {
+  id: String!
+}
+
+type Rating {
+  courier: Courier
+  createdAt: DateTime!
+  entity: EnumRatingEntity
+  entityId: String!
+  id: String!
+  images(orderBy: [ImageOrderByInput!], skip: Float, take: Float, where: ImageWhereInput): [Image!]!
+  media(orderBy: [MediaFileOrderByInput!], skip: Float, take: Float, where: MediaFileWhereInput): [MediaFile!]!
+  seller: Seller
+  updatedAt: DateTime!
+  value: Float!
+}
+
+input RatingCreateInput {
+  courier: CourierWhereUniqueInput
+  entity: EnumRatingEntity!
+  entityId: String!
+  images: ImageCreateNestedManyWithoutRatingsInput
+  media: MediaFileCreateNestedManyWithoutRatingsInput
+  seller: SellerWhereUniqueInput
+  value: Float!
+}
+
+input RatingCreateNestedManyWithoutCouriersInput {
+  connect: [RatingWhereUniqueInput!]
+}
+
+input RatingCreateNestedManyWithoutSellersInput {
+  connect: [RatingWhereUniqueInput!]
+}
+
+input RatingListRelationFilter {
+  every: RatingWhereInput
+  none: RatingWhereInput
+  some: RatingWhereInput
+}
+
+input RatingOrderByInput {
+  courierId: SortOrder
+  createdAt: SortOrder
+  entity: SortOrder
+  entityId: SortOrder
+  id: SortOrder
+  sellerId: SortOrder
+  updatedAt: SortOrder
+  value: SortOrder
+}
+
+input RatingUpdateInput {
+  courier: CourierWhereUniqueInput
+  entity: EnumRatingEntity
+  entityId: String
+  images: ImageUpdateManyWithoutRatingsInput
+  media: MediaFileUpdateManyWithoutRatingsInput
+  seller: SellerWhereUniqueInput
+  value: Float
+}
+
+input RatingUpdateManyWithoutCouriersInput {
+  connect: [RatingWhereUniqueInput!]
+  disconnect: [RatingWhereUniqueInput!]
+  set: [RatingWhereUniqueInput!]
+}
+
+input RatingUpdateManyWithoutSellersInput {
+  connect: [RatingWhereUniqueInput!]
+  disconnect: [RatingWhereUniqueInput!]
+  set: [RatingWhereUniqueInput!]
+}
+
+input RatingWhereInput {
+  courier: CourierWhereUniqueInput
+  entity: EnumRatingEntity
+  entityId: StringFilter
+  id: StringFilter
+  images: ImageListRelationFilter
+  media: MediaFileListRelationFilter
+  seller: SellerWhereUniqueInput
+  value: FloatFilter
+}
+
+input RatingWhereUniqueInput {
+  id: String!
+}
+
+type Scalar {
+  classification: EnumScalarClassification
+  computedValue: Float
+  estimatedValue: Float
+  id: String!
+  itemQuantityAllocatedMeasure(orderBy: [ItemQuantityOrderByInput!], skip: Float, take: Float, where: ItemQuantityWhereInput): [ItemQuantity!]!
+  itemQuantityAvailableMeasure(orderBy: [ItemQuantityOrderByInput!], skip: Float, take: Float, where: ItemQuantityWhereInput): [ItemQuantity!]!
+  itemQuantityMaximumPurchasableMeasure(orderBy: [ItemQuantityOrderByInput!], skip: Float, take: Float, where: ItemQuantityWhereInput): [ItemQuantity!]!
+  itemQuantityMinimumPurchasableMeasure(orderBy: [ItemQuantityOrderByInput!], skip: Float, take: Float, where: ItemQuantityWhereInput): [ItemQuantity!]!
+  itemQuantitySelectedMeasure(orderBy: [ItemQuantityOrderByInput!], skip: Float, take: Float, where: ItemQuantityWhereInput): [ItemQuantity!]!
+  range: JSON
+  unit: String!
+  value: Float!
+}
+
+input ScalarCreateInput {
+  classification: EnumScalarClassification!
+  computedValue: Float
+  estimatedValue: Float
+  itemQuantityAllocatedMeasure: ItemQuantityCreateNestedManyWithoutScalarsInput
+  itemQuantityAvailableMeasure: ItemQuantityCreateNestedManyWithoutScalarsInput
+  itemQuantityMaximumPurchasableMeasure: ItemQuantityCreateNestedManyWithoutScalarsInput
+  itemQuantityMinimumPurchasableMeasure: ItemQuantityCreateNestedManyWithoutScalarsInput
+  itemQuantitySelectedMeasure: ItemQuantityCreateNestedManyWithoutScalarsInput
+  range: JSON
+  unit: String!
+  value: Float!
+}
+
+input ScalarOrderByInput {
+  classification: SortOrder
+  computedValue: SortOrder
+  estimatedValue: SortOrder
+  id: SortOrder
+  range: SortOrder
+  unit: SortOrder
+  value: SortOrder
+}
+
+input ScalarUpdateInput {
+  classification: EnumScalarClassification
+  computedValue: Float
+  estimatedValue: Float
+  itemQuantityAllocatedMeasure: ItemQuantityUpdateManyWithoutScalarsInput
+  itemQuantityAvailableMeasure: ItemQuantityUpdateManyWithoutScalarsInput
+  itemQuantityMaximumPurchasableMeasure: ItemQuantityUpdateManyWithoutScalarsInput
+  itemQuantityMinimumPurchasableMeasure: ItemQuantityUpdateManyWithoutScalarsInput
+  itemQuantitySelectedMeasure: ItemQuantityUpdateManyWithoutScalarsInput
+  range: JSON
+  unit: String
+  value: Float
+}
+
+input ScalarWhereInput {
+  classification: EnumScalarClassification
+  computedValue: FloatNullableFilter
+  estimatedValue: FloatNullableFilter
+  id: StringFilter
+  itemQuantityAllocatedMeasure: ItemQuantityListRelationFilter
+  itemQuantityAvailableMeasure: ItemQuantityListRelationFilter
+  itemQuantityMaximumPurchasableMeasure: ItemQuantityListRelationFilter
+  itemQuantityMinimumPurchasableMeasure: ItemQuantityListRelationFilter
+  itemQuantitySelectedMeasure: ItemQuantityListRelationFilter
+  range: JsonFilter
+  unit: StringFilter
+  value: FloatFilter
+}
+
+input ScalarWhereUniqueInput {
+  id: String!
+}
+
+type Search {
+  createdAt: DateTime!
+  fulfillmentSpecification: FulfillmentSpecification
+  id: String!
+  menuItems: MenuItem
+  paymentTerm: PaymentTerm
+  promotions(orderBy: [PromotionOrderByInput!], skip: Float, take: Float, where: PromotionWhereInput): [Promotion!]!
+  sellers(orderBy: [SellerOrderByInput!], skip: Float, take: Float, where: SellerWhereInput): [Seller!]!
+  updatedAt: DateTime!
+}
+
+input SearchCreateInput {
+  fulfillmentSpecification: FulfillmentSpecificationWhereUniqueInput
+  menuItems: MenuItemWhereUniqueInput
+  paymentTerm: PaymentTermWhereUniqueInput
+  promotions: PromotionCreateNestedManyWithoutSearchesInput
+  sellers: SellerCreateNestedManyWithoutSearchesInput
+}
+
+input SearchCreateNestedManyWithoutFulfillmentSpecificationsInput {
+  connect: [SearchWhereUniqueInput!]
+}
+
+input SearchCreateNestedManyWithoutMenuItemsInput {
+  connect: [SearchWhereUniqueInput!]
+}
+
+input SearchListRelationFilter {
+  every: SearchWhereInput
+  none: SearchWhereInput
+  some: SearchWhereInput
+}
+
+input SearchOrderByInput {
+  createdAt: SortOrder
+  fulfillmentSpecificationId: SortOrder
+  id: SortOrder
+  menuItemsId: SortOrder
+  paymentTermId: SortOrder
+  updatedAt: SortOrder
+}
+
+input SearchUpdateInput {
+  fulfillmentSpecification: FulfillmentSpecificationWhereUniqueInput
+  menuItems: MenuItemWhereUniqueInput
+  paymentTerm: PaymentTermWhereUniqueInput
+  promotions: PromotionUpdateManyWithoutSearchesInput
+  sellers: SellerUpdateManyWithoutSearchesInput
+}
+
+input SearchUpdateManyWithoutFulfillmentSpecificationsInput {
+  connect: [SearchWhereUniqueInput!]
+  disconnect: [SearchWhereUniqueInput!]
+  set: [SearchWhereUniqueInput!]
+}
+
+input SearchUpdateManyWithoutMenuItemsInput {
+  connect: [SearchWhereUniqueInput!]
+  disconnect: [SearchWhereUniqueInput!]
+  set: [SearchWhereUniqueInput!]
+}
+
+input SearchWhereInput {
+  fulfillmentSpecification: FulfillmentSpecificationWhereUniqueInput
+  id: StringFilter
+  menuItems: MenuItemWhereUniqueInput
+  paymentTerm: PaymentTermWhereUniqueInput
+  promotions: PromotionListRelationFilter
+  sellers: SellerListRelationFilter
+}
+
+input SearchWhereUniqueInput {
+  id: String!
+}
+
+type Seller {
+  bazaar(orderBy: [BazaarOrderByInput!], skip: Float, take: Float, where: BazaarWhereInput): [Bazaar!]!
+  categories(orderBy: [CategoryOrderByInput!], skip: Float, take: Float, where: CategoryWhereInput): [Category!]!
+  createdAt: DateTime!
+  fulfillmentSpecifications(orderBy: [FulfillmentSpecificationOrderByInput!], skip: Float, take: Float, where: FulfillmentSpecificationWhereInput): [FulfillmentSpecification!]!
+  holidays: JSON
+  id: String!
+  isRateable: Boolean!
+  locations(orderBy: [LocationOrderByInput!], skip: Float, take: Float, where: LocationWhereInput): [Location!]!
+  menuItems(orderBy: [MenuItemOrderByInput!], skip: Float, take: Float, where: MenuItemWhereInput): [MenuItem!]!
+  menus(orderBy: [MenuOrderByInput!], skip: Float, take: Float, where: MenuWhereInput): [Menu!]!
+  modifierGroups(orderBy: [ModifierGroupOrderByInput!], skip: Float, take: Float, where: ModifierGroupWhereInput): [ModifierGroup!]!
+  password: String
+  paymentTerm: PaymentTerm
+  promotions(orderBy: [PromotionOrderByInput!], skip: Float, take: Float, where: PromotionWhereInput): [Promotion!]!
+  rating: Float
+  ratings(orderBy: [RatingOrderByInput!], skip: Float, take: Float, where: RatingWhereInput): [Rating!]!
+  search: Search
+  sellerClassificationId: String
+  updatedAt: DateTime!
+  users: User
+}
+
+input SellerCreateInput {
+  bazaar: BazaarCreateNestedManyWithoutSellersInput
+  categories: CategoryCreateNestedManyWithoutSellersInput
+  fulfillmentSpecifications: FulfillmentSpecificationCreateNestedManyWithoutSellersInput
+  holidays: JSON
+  isRateable: Boolean!
+  locations: LocationCreateNestedManyWithoutSellersInput
+  menuItems: MenuItemCreateNestedManyWithoutSellersInput
+  menus: MenuCreateNestedManyWithoutSellersInput
+  modifierGroups: ModifierGroupCreateNestedManyWithoutSellersInput
+  password: String
+  paymentTerm: PaymentTermWhereUniqueInput
+  promotions: PromotionCreateNestedManyWithoutSellersInput
+  rating: Float
+  ratings: RatingCreateNestedManyWithoutSellersInput
+  search: SearchWhereUniqueInput
+  sellerClassificationId: String
+  users: UserWhereUniqueInput!
+}
+
+input SellerCreateNestedManyWithoutBazaarsInput {
+  connect: [SellerWhereUniqueInput!]
+}
+
+input SellerCreateNestedManyWithoutSearchesInput {
+  connect: [SellerWhereUniqueInput!]
+}
+
+input SellerListRelationFilter {
+  every: SellerWhereInput
+  none: SellerWhereInput
+  some: SellerWhereInput
+}
+
+input SellerOrderByInput {
+  createdAt: SortOrder
+  holidays: SortOrder
+  id: SortOrder
+  isRateable: SortOrder
+  password: SortOrder
+  paymentTermId: SortOrder
+  rating: SortOrder
+  searchId: SortOrder
+  sellerClassificationId: SortOrder
+  updatedAt: SortOrder
+  usersId: SortOrder
+}
+
+input SellerUpdateInput {
+  bazaar: BazaarUpdateManyWithoutSellersInput
+  categories: CategoryUpdateManyWithoutSellersInput
+  fulfillmentSpecifications: FulfillmentSpecificationUpdateManyWithoutSellersInput
+  holidays: JSON
+  isRateable: Boolean
+  locations: LocationUpdateManyWithoutSellersInput
+  menuItems: MenuItemUpdateManyWithoutSellersInput
+  menus: MenuUpdateManyWithoutSellersInput
+  modifierGroups: ModifierGroupUpdateManyWithoutSellersInput
+  password: String
+  paymentTerm: PaymentTermWhereUniqueInput
+  promotions: PromotionUpdateManyWithoutSellersInput
+  rating: Float
+  ratings: RatingUpdateManyWithoutSellersInput
+  search: SearchWhereUniqueInput
+  sellerClassificationId: String
+  users: UserWhereUniqueInput
+}
+
+input SellerUpdateManyWithoutBazaarsInput {
+  connect: [SellerWhereUniqueInput!]
+  disconnect: [SellerWhereUniqueInput!]
+  set: [SellerWhereUniqueInput!]
+}
+
+input SellerUpdateManyWithoutSearchesInput {
+  connect: [SellerWhereUniqueInput!]
+  disconnect: [SellerWhereUniqueInput!]
+  set: [SellerWhereUniqueInput!]
+}
+
+input SellerWhereInput {
+  bazaar: BazaarListRelationFilter
+  categories: CategoryListRelationFilter
+  fulfillmentSpecifications: FulfillmentSpecificationListRelationFilter
+  holidays: JsonFilter
+  id: StringFilter
+  isRateable: BooleanFilter
+  locations: LocationListRelationFilter
+  menuItems: MenuItemListRelationFilter
+  menus: MenuListRelationFilter
+  modifierGroups: ModifierGroupListRelationFilter
+  password: StringNullableFilter
+  paymentTerm: PaymentTermWhereUniqueInput
+  promotions: PromotionListRelationFilter
+  rating: FloatNullableFilter
+  ratings: RatingListRelationFilter
+  search: SearchWhereUniqueInput
+  sellerClassificationId: StringNullableFilter
+  users: UserWhereUniqueInput
+}
+
+input SellerWhereUniqueInput {
+  id: String!
+}
+
+enum SortOrder {
+  Asc
+  Desc
+}
+
+input StringFilter {
+  contains: String
+  endsWith: String
+  equals: String
+  gt: String
+  gte: String
+  in: [String!]
+  lt: String
+  lte: String
+  mode: QueryMode
+  not: String
+  notIn: [String!]
+  startsWith: String
+}
+
+input StringNullableFilter {
+  contains: String
+  endsWith: String
+  equals: String
+  gt: String
+  gte: String
+  in: [String!]
+  lt: String
+  lte: String
+  mode: QueryMode
+  not: String
+  notIn: [String!]
+  startsWith: String
+}
+
+type Support {
+  createdAt: DateTime!
+  email: String!
+  id: String!
+  phone: String!
+  updatedAt: DateTime!
+  url: String!
+}
+
+input SupportCreateInput {
+  email: String!
+  phone: String!
+  url: String!
+}
+
+input SupportOrderByInput {
+  createdAt: SortOrder
+  email: SortOrder
+  id: SortOrder
+  phone: SortOrder
+  updatedAt: SortOrder
+  url: SortOrder
+}
+
+input SupportUpdateInput {
+  email: String
+  phone: String
+  url: String
+}
+
+input SupportWhereInput {
+  email: StringFilter
+  id: StringFilter
+  phone: StringFilter
+}
+
+input SupportWhereUniqueInput {
+  id: String!
+}
+
+type Tracking {
+  createdAt: DateTime!
+  fulfillmentSpecifications: FulfillmentSpecification
+  id: String!
+  location: Location
+  status: EnumTrackingStatus
+  trackingUrl: String!
+  updatedAt: DateTime!
+}
+
+input TrackingCreateInput {
+  fulfillmentSpecifications: FulfillmentSpecificationWhereUniqueInput
+  location: LocationWhereUniqueInput
+  status: EnumTrackingStatus!
+  trackingUrl: String!
+}
+
+input TrackingOrderByInput {
+  createdAt: SortOrder
+  fulfillmentSpecificationsId: SortOrder
+  id: SortOrder
+  locationId: SortOrder
+  status: SortOrder
+  trackingUrl: SortOrder
+  updatedAt: SortOrder
+}
+
+input TrackingUpdateInput {
+  fulfillmentSpecifications: FulfillmentSpecificationWhereUniqueInput
+  location: LocationWhereUniqueInput
+  status: EnumTrackingStatus
+  trackingUrl: String
+}
+
+input TrackingWhereInput {
+  fulfillmentSpecifications: FulfillmentSpecificationWhereUniqueInput
+  id: StringFilter
+  location: LocationWhereUniqueInput
+  status: EnumTrackingStatus
+}
+
+input TrackingWhereUniqueInput {
+  id: String!
+}
+
+type User {
+  courier: Courier
+  createdAt: DateTime!
+  fulfillmentSpecifications(orderBy: [FulfillmentSpecificationOrderByInput!], skip: Float, take: Float, where: FulfillmentSpecificationWhereInput): [FulfillmentSpecification!]!
+  id: String!
+  individual: Individual
+  paymentSources(orderBy: [PaymentSourceOrderByInput!], skip: Float, take: Float, where: PaymentSourceWhereInput): [PaymentSource!]!
+  roles: JSON!
+  seller: Seller
+  updatedAt: DateTime!
+  username: String!
+}
+
+input UserCreateInput {
+  courier: CourierWhereUniqueInput
+  fulfillmentSpecifications: FulfillmentSpecificationCreateNestedManyWithoutUsersInput
+  individual: IndividualWhereUniqueInput
+  password: String!
+  paymentSources: PaymentSourceCreateNestedManyWithoutUsersInput
+  roles: JSON!
+  seller: SellerWhereUniqueInput
+  username: String!
+}
+
+type UserInfo {
+  accessToken: String
+  id: String!
+  roles: [String!]!
+  username: String!
+}
+
+input UserOrderByInput {
+  courierId: SortOrder
+  createdAt: SortOrder
+  id: SortOrder
+  individualId: SortOrder
+  password: SortOrder
+  roles: SortOrder
+  sellerId: SortOrder
+  updatedAt: SortOrder
+  username: SortOrder
+}
+
+input UserUpdateInput {
+  courier: CourierWhereUniqueInput
+  fulfillmentSpecifications: FulfillmentSpecificationUpdateManyWithoutUsersInput
+  individual: IndividualWhereUniqueInput
+  password: String
+  paymentSources: PaymentSourceUpdateManyWithoutUsersInput
+  roles: JSON
+  seller: SellerWhereUniqueInput
+  username: String
+}
+
+input UserWhereInput {
+  courier: CourierWhereUniqueInput
+  fulfillmentSpecifications: FulfillmentSpecificationListRelationFilter
+  id: StringFilter
+  individual: IndividualWhereUniqueInput
+  paymentSources: PaymentSourceListRelationFilter
+  seller: SellerWhereUniqueInput
+  username: StringFilter
+}
+
+input UserWhereUniqueInput {
+  id: String!
+}
+
+type Vehicle {
+  capacity: Float
+  category: String
+  code: String
+  color: String
+  createdAt: DateTime!
+  fulfillmentSpecifications(orderBy: [FulfillmentSpecificationOrderByInput!], skip: Float, take: Float, where: FulfillmentSpecificationWhereInput): [FulfillmentSpecification!]!
+  id: String!
+  make: String
+  model: String
+  registration: String
+  size: String
+  updatedAt: DateTime!
+  volume: String
+  wheelsCount: Float
+}
+
+input VehicleCreateInput {
+  capacity: Float
+  category: String
+  code: String
+  color: String
+  fulfillmentSpecifications: FulfillmentSpecificationCreateNestedManyWithoutVehiclesInput
+  make: String
+  model: String
+  registration: String
+  size: String
+  volume: String
+  wheelsCount: Float
+}
+
+input VehicleOrderByInput {
+  capacity: SortOrder
+  category: SortOrder
+  code: SortOrder
+  color: SortOrder
+  createdAt: SortOrder
+  id: SortOrder
+  make: SortOrder
+  model: SortOrder
+  registration: SortOrder
+  size: SortOrder
+  updatedAt: SortOrder
+  volume: SortOrder
+  wheelsCount: SortOrder
+}
+
+input VehicleUpdateInput {
+  capacity: Float
+  category: String
+  code: String
+  color: String
+  fulfillmentSpecifications: FulfillmentSpecificationUpdateManyWithoutVehiclesInput
+  make: String
+  model: String
+  registration: String
+  size: String
+  volume: String
+  wheelsCount: Float
+}
+
+input VehicleWhereInput {
+  capacity: IntNullableFilter
+  category: StringNullableFilter
+  code: StringNullableFilter
+  color: StringNullableFilter
+  fulfillmentSpecifications: FulfillmentSpecificationListRelationFilter
+  id: StringFilter
+  make: StringNullableFilter
+  model: StringNullableFilter
+  registration: StringNullableFilter
+  size: StringNullableFilter
+  volume: StringNullableFilter
+  wheelsCount: IntNullableFilter
+}
+
+input VehicleWhereUniqueInput {
+  id: String!
+}
+
+type Waypoint {
+  contact: Contact
+  createdAt: DateTime!
+  fulfillmentSpecification: FulfillmentSpecification
+  id: String!
+  individual(orderBy: [IndividualOrderByInput!], skip: Float, take: Float, where: IndividualWhereInput): [Individual!]!
+  location: Location
+  updatedAt: DateTime!
+  waypointCode: String!
+}
+
+input WaypointCreateInput {
+  contact: ContactWhereUniqueInput
+  fulfillmentSpecification: FulfillmentSpecificationWhereUniqueInput
+  individual: IndividualCreateNestedManyWithoutWaypointsInput
+  location: LocationWhereUniqueInput
+  waypointCode: String!
+}
+
+input WaypointCreateNestedManyWithoutContactsInput {
+  connect: [WaypointWhereUniqueInput!]
+}
+
+input WaypointCreateNestedManyWithoutFulfillmentSpecificationsInput {
+  connect: [WaypointWhereUniqueInput!]
+}
+
+input WaypointCreateNestedManyWithoutIndividualsInput {
+  connect: [WaypointWhereUniqueInput!]
+}
+
+input WaypointListRelationFilter {
+  every: WaypointWhereInput
+  none: WaypointWhereInput
+  some: WaypointWhereInput
+}
+
+input WaypointOrderByInput {
+  contactId: SortOrder
+  createdAt: SortOrder
+  fulfillmentSpecificationId: SortOrder
+  id: SortOrder
+  locationId: SortOrder
+  updatedAt: SortOrder
+  waypointCode: SortOrder
+}
+
+input WaypointUpdateInput {
+  contact: ContactWhereUniqueInput
+  fulfillmentSpecification: FulfillmentSpecificationWhereUniqueInput
+  individual: IndividualUpdateManyWithoutWaypointsInput
+  location: LocationWhereUniqueInput
+  waypointCode: String
+}
+
+input WaypointUpdateManyWithoutContactsInput {
+  connect: [WaypointWhereUniqueInput!]
+  disconnect: [WaypointWhereUniqueInput!]
+  set: [WaypointWhereUniqueInput!]
+}
+
+input WaypointUpdateManyWithoutFulfillmentSpecificationsInput {
+  connect: [WaypointWhereUniqueInput!]
+  disconnect: [WaypointWhereUniqueInput!]
+  set: [WaypointWhereUniqueInput!]
+}
+
+input WaypointUpdateManyWithoutIndividualsInput {
+  connect: [WaypointWhereUniqueInput!]
+  disconnect: [WaypointWhereUniqueInput!]
+  set: [WaypointWhereUniqueInput!]
+}
+
+input WaypointWhereInput {
+  contact: ContactWhereUniqueInput
+  fulfillmentSpecification: FulfillmentSpecificationWhereUniqueInput
+  id: StringFilter
+  individual: IndividualListRelationFilter
+  location: LocationWhereUniqueInput
+  waypointCode: StringFilter
+}
+
+input WaypointWhereUniqueInput {
+  id: String!
+}

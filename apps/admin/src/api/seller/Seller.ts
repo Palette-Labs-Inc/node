@@ -1,0 +1,36 @@
+import { Bazaar } from "../bazaar/Bazaar";
+import { Category } from "../category/Category";
+import { FulfillmentSpecification } from "../fulfillmentSpecification/FulfillmentSpecification";
+import { JsonValue } from "type-fest";
+import { Location } from "../location/Location";
+import { MenuItem } from "../menuItem/MenuItem";
+import { Menu } from "../menu/Menu";
+import { ModifierGroup } from "../modifierGroup/ModifierGroup";
+import { PaymentTerm } from "../paymentTerm/PaymentTerm";
+import { Promotion } from "../promotion/Promotion";
+import { Rating } from "../rating/Rating";
+import { Search } from "../search/Search";
+import { User } from "../user/User";
+
+export type Seller = {
+  bazaar?: Array<Bazaar>;
+  categories?: Array<Category>;
+  createdAt: Date;
+  fulfillmentSpecifications?: Array<FulfillmentSpecification>;
+  holidays: JsonValue;
+  id: string;
+  isRateable: boolean;
+  locations?: Array<Location>;
+  menuItems?: Array<MenuItem>;
+  menus?: Array<Menu>;
+  modifierGroups?: Array<ModifierGroup>;
+  password: string | null;
+  paymentTerm?: PaymentTerm | null;
+  promotions?: Array<Promotion>;
+  rating: number | null;
+  ratings?: Array<Rating>;
+  search?: Search | null;
+  sellerClassificationId: string | null;
+  updatedAt: Date;
+  users?: User;
+};

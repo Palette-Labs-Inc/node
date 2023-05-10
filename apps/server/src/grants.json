@@ -1,0 +1,3938 @@
+[
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Image",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Image",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Image",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Image",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Image",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Image",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Image",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Image",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Image",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Image",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Image",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Image",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Image",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Image",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Image",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Image",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "MediaFile",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "MediaFile",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "MediaFile",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "MediaFile",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "MediaFile",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "MediaFile",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "MediaFile",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "MediaFile",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "MediaFile",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "MediaFile",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "MediaFile",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "MediaFile",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "MediaFile",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "MediaFile",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "MediaFile",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "MediaFile",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "MediaFile",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "MediaFile",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "MediaFile",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "MediaFile",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Individual",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Individual",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Individual",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Individual",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Individual",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Individual",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Individual",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Individual",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Individual",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Individual",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Individual",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Individual",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Individual",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Individual",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Individual",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Individual",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Individual",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Individual",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Individual",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Individual",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Contact",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Contact",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Contact",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Contact",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Contact",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Contact",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Contact",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Contact",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Contact",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Contact",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Contact",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Contact",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Contact",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Contact",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Contact",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Contact",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Contact",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Contact",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Contact",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Contact",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "PaymentSource",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "PaymentSource",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "PaymentSource",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "PaymentSource",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "PaymentSource",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "PaymentSource",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "PaymentSource",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "PaymentSource",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "PaymentSource",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "PaymentSource",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "PaymentSource",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "PaymentSource",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "PaymentSource",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "PaymentSource",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "PaymentSource",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "PaymentSource",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "PaymentSource",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "PaymentSource",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "PaymentSource",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "PaymentSource",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Scalar",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Scalar",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Scalar",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Scalar",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Scalar",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Scalar",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Scalar",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Scalar",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Scalar",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Scalar",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Scalar",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Scalar",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Scalar",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Scalar",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Scalar",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Scalar",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Scalar",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Scalar",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Scalar",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Scalar",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Location",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Location",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Location",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Location",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Location",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Location",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Location",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Location",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Location",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Location",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Location",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Location",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Location",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Location",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Location",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Location",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Location",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Location",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Location",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Location",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Seller",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Seller",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Seller",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Seller",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Seller",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Seller",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Seller",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Seller",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Seller",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Seller",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Seller",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Seller",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Seller",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Seller",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Seller",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Seller",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Seller",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Seller",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Seller",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Seller",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "PaymentTerm",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "PaymentTerm",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "PaymentTerm",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "PaymentTerm",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "PaymentTerm",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "PaymentTerm",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "PaymentTerm",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "PaymentTerm",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "PaymentTerm",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "PaymentTerm",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "PaymentTerm",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "PaymentTerm",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "PaymentTerm",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "PaymentTerm",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "PaymentTerm",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "PaymentTerm",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "PaymentTerm",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "PaymentTerm",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "PaymentTerm",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "PaymentTerm",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Promotion",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Promotion",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Promotion",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Promotion",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Promotion",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Promotion",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Promotion",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Promotion",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Promotion",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Promotion",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Promotion",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Promotion",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Promotion",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Promotion",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Promotion",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Promotion",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Promotion",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Promotion",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Promotion",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Promotion",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "ModifierGroup",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "ModifierGroup",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "ModifierGroup",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "ModifierGroup",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "ModifierGroup",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "ModifierGroup",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "ModifierGroup",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "ModifierGroup",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "ModifierGroup",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "ModifierGroup",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "ModifierGroup",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "ModifierGroup",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "ModifierGroup",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "ModifierGroup",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "ModifierGroup",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "ModifierGroup",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "ModifierGroup",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "ModifierGroup",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "ModifierGroup",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "ModifierGroup",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "ItemQuantity",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "ItemQuantity",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "ItemQuantity",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "ItemQuantity",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "ItemQuantity",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "ItemQuantity",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "ItemQuantity",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "ItemQuantity",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "ItemQuantity",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "ItemQuantity",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "ItemQuantity",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "ItemQuantity",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "ItemQuantity",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "ItemQuantity",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "ItemQuantity",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "ItemQuantity",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "ItemQuantity",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "ItemQuantity",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "ItemQuantity",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "ItemQuantity",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Organization",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Organization",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Organization",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Organization",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Organization",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Organization",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Organization",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Organization",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Organization",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Organization",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Organization",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Organization",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Organization",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Organization",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Organization",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Organization",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Organization",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Organization",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Organization",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Organization",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Vehicle",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Vehicle",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Vehicle",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Vehicle",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Vehicle",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Vehicle",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Vehicle",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Vehicle",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Vehicle",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Vehicle",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Vehicle",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Vehicle",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Vehicle",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Vehicle",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Vehicle",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Vehicle",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Vehicle",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Vehicle",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Vehicle",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Vehicle",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Rating",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Rating",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Rating",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Rating",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Rating",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Rating",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Rating",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Rating",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Rating",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Rating",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Rating",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Rating",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Rating",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Rating",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Rating",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Rating",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Rating",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Rating",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Rating",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Rating",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Tracking",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Tracking",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Tracking",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Tracking",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Tracking",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Tracking",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Tracking",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Tracking",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Tracking",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Tracking",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Tracking",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Tracking",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Tracking",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Tracking",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Tracking",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Tracking",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Tracking",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Tracking",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Tracking",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Tracking",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Billing",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Billing",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Billing",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Billing",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Billing",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Billing",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Billing",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Billing",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Billing",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Billing",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Billing",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Billing",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Billing",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Billing",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Billing",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Billing",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Billing",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Billing",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Billing",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Billing",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Courier",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Courier",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Courier",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Courier",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Courier",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Courier",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Courier",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Courier",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Courier",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Courier",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Courier",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Courier",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Courier",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Courier",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Courier",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Courier",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Courier",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Courier",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Courier",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Courier",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Waypoint",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Waypoint",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Waypoint",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Waypoint",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Waypoint",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Waypoint",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Waypoint",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Waypoint",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Waypoint",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Waypoint",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Waypoint",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Waypoint",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Waypoint",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Waypoint",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Waypoint",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Waypoint",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Waypoint",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Waypoint",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Waypoint",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Waypoint",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Cancellation",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Cancellation",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Cancellation",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Cancellation",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Cancellation",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Cancellation",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Cancellation",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Cancellation",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Cancellation",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Cancellation",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Cancellation",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Cancellation",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Cancellation",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Cancellation",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Cancellation",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Cancellation",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Cancellation",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Cancellation",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Cancellation",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Cancellation",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Quote",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Quote",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Quote",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Quote",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Quote",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Quote",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Quote",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Quote",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Quote",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Quote",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Quote",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Quote",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Quote",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Quote",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Quote",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Quote",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Quote",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Quote",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Quote",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Quote",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "FulfillmentSpecification",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "FulfillmentSpecification",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "FulfillmentSpecification",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "FulfillmentSpecification",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "FulfillmentSpecification",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "FulfillmentSpecification",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "FulfillmentSpecification",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "FulfillmentSpecification",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "FulfillmentSpecification",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "FulfillmentSpecification",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "FulfillmentSpecification",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "FulfillmentSpecification",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "FulfillmentSpecification",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "FulfillmentSpecification",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "FulfillmentSpecification",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "FulfillmentSpecification",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "FulfillmentSpecification",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "FulfillmentSpecification",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "FulfillmentSpecification",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "FulfillmentSpecification",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "MenuItem",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "MenuItem",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "MenuItem",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "MenuItem",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "MenuItem",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "MenuItem",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "MenuItem",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "MenuItem",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "MenuItem",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "MenuItem",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "MenuItem",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "MenuItem",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "MenuItem",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "MenuItem",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "MenuItem",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "MenuItem",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "MenuItem",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "MenuItem",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "MenuItem",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "MenuItem",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Category",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Category",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Category",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Category",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Category",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Category",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Category",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Category",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Category",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Category",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Category",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Category",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Category",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Category",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Category",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Category",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Category",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Category",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Category",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Category",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Menu",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Menu",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Menu",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Menu",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Menu",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Menu",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Menu",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Menu",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Menu",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Menu",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Menu",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Menu",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Menu",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Menu",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Menu",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Menu",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Menu",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Menu",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Menu",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Menu",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Bazaar",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Bazaar",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Bazaar",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Bazaar",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Bazaar",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Bazaar",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Bazaar",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Bazaar",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Bazaar",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Bazaar",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Bazaar",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Bazaar",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Bazaar",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Bazaar",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Bazaar",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Bazaar",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Bazaar",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Bazaar",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Bazaar",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Bazaar",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Support",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Support",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Support",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Support",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Support",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Support",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Support",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Support",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Support",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Support",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Support",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Support",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Support",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Support",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Support",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Support",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Support",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Support",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Support",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Support",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Order",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Order",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Order",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Order",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Order",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Order",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Order",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Order",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Order",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Order",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Order",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Order",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Order",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Order",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Order",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Order",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Order",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Order",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Order",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Order",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Node",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Node",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Node",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Node",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Node",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Node",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Node",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Node",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Node",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Node",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Node",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Node",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Node",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Node",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Node",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Node",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Node",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Node",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Node",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Node",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Condition",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Condition",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Condition",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Condition",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Condition",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Condition",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Condition",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Condition",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Condition",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Condition",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Condition",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Condition",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Condition",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Condition",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Condition",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Condition",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Condition",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Condition",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Condition",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Condition",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Search",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Search",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Search",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Search",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Search",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Search",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Search",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Search",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Search",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Search",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Search",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Search",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Search",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Search",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Search",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Search",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Search",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Search",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Search",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "Search",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "HourInterval",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "HourInterval",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "HourInterval",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "HourInterval",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "HourInterval",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "HourInterval",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "HourInterval",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "HourInterval",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "HourInterval",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "HourInterval",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "HourInterval",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "HourInterval",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "HourInterval",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "HourInterval",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "HourInterval",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "HourInterval",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "HourInterval",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "HourInterval",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "HourInterval",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "courier",
+    "resource": "HourInterval",
+    "action": "read:any",
+    "attributes": "*"
+  }
+]

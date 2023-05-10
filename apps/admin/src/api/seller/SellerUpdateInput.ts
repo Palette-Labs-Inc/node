@@ -1,0 +1,33 @@
+import { BazaarUpdateManyWithoutSellersInput } from "./BazaarUpdateManyWithoutSellersInput";
+import { CategoryUpdateManyWithoutSellersInput } from "./CategoryUpdateManyWithoutSellersInput";
+import { FulfillmentSpecificationUpdateManyWithoutSellersInput } from "./FulfillmentSpecificationUpdateManyWithoutSellersInput";
+import { InputJsonValue } from "../../types";
+import { LocationUpdateManyWithoutSellersInput } from "./LocationUpdateManyWithoutSellersInput";
+import { MenuItemUpdateManyWithoutSellersInput } from "./MenuItemUpdateManyWithoutSellersInput";
+import { MenuUpdateManyWithoutSellersInput } from "./MenuUpdateManyWithoutSellersInput";
+import { ModifierGroupUpdateManyWithoutSellersInput } from "./ModifierGroupUpdateManyWithoutSellersInput";
+import { PaymentTermWhereUniqueInput } from "../paymentTerm/PaymentTermWhereUniqueInput";
+import { PromotionUpdateManyWithoutSellersInput } from "./PromotionUpdateManyWithoutSellersInput";
+import { RatingUpdateManyWithoutSellersInput } from "./RatingUpdateManyWithoutSellersInput";
+import { SearchWhereUniqueInput } from "../search/SearchWhereUniqueInput";
+import { UserWhereUniqueInput } from "../user/UserWhereUniqueInput";
+
+export type SellerUpdateInput = {
+  bazaar?: BazaarUpdateManyWithoutSellersInput;
+  categories?: CategoryUpdateManyWithoutSellersInput;
+  fulfillmentSpecifications?: FulfillmentSpecificationUpdateManyWithoutSellersInput;
+  holidays?: InputJsonValue;
+  isRateable?: boolean;
+  locations?: LocationUpdateManyWithoutSellersInput;
+  menuItems?: MenuItemUpdateManyWithoutSellersInput;
+  menus?: MenuUpdateManyWithoutSellersInput;
+  modifierGroups?: ModifierGroupUpdateManyWithoutSellersInput;
+  password?: string | null;
+  paymentTerm?: PaymentTermWhereUniqueInput | null;
+  promotions?: PromotionUpdateManyWithoutSellersInput;
+  rating?: number | null;
+  ratings?: RatingUpdateManyWithoutSellersInput;
+  search?: SearchWhereUniqueInput | null;
+  sellerClassificationId?: string | null;
+  users?: UserWhereUniqueInput;
+};

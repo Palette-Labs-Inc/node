@@ -1,0 +1,38 @@
+import { BazaarListRelationFilter } from "../bazaar/BazaarListRelationFilter";
+import { CategoryListRelationFilter } from "../category/CategoryListRelationFilter";
+import { FulfillmentSpecificationListRelationFilter } from "../fulfillmentSpecification/FulfillmentSpecificationListRelationFilter";
+import { JsonFilter } from "../../util/JsonFilter";
+import { StringFilter } from "../../util/StringFilter";
+import { BooleanFilter } from "../../util/BooleanFilter";
+import { LocationListRelationFilter } from "../location/LocationListRelationFilter";
+import { MenuItemListRelationFilter } from "../menuItem/MenuItemListRelationFilter";
+import { MenuListRelationFilter } from "../menu/MenuListRelationFilter";
+import { ModifierGroupListRelationFilter } from "../modifierGroup/ModifierGroupListRelationFilter";
+import { StringNullableFilter } from "../../util/StringNullableFilter";
+import { PaymentTermWhereUniqueInput } from "../paymentTerm/PaymentTermWhereUniqueInput";
+import { PromotionListRelationFilter } from "../promotion/PromotionListRelationFilter";
+import { FloatNullableFilter } from "../../util/FloatNullableFilter";
+import { RatingListRelationFilter } from "../rating/RatingListRelationFilter";
+import { SearchWhereUniqueInput } from "../search/SearchWhereUniqueInput";
+import { UserWhereUniqueInput } from "../user/UserWhereUniqueInput";
+
+export type SellerWhereInput = {
+  bazaar?: BazaarListRelationFilter;
+  categories?: CategoryListRelationFilter;
+  fulfillmentSpecifications?: FulfillmentSpecificationListRelationFilter;
+  holidays?: JsonFilter;
+  id?: StringFilter;
+  isRateable?: BooleanFilter;
+  locations?: LocationListRelationFilter;
+  menuItems?: MenuItemListRelationFilter;
+  menus?: MenuListRelationFilter;
+  modifierGroups?: ModifierGroupListRelationFilter;
+  password?: StringNullableFilter;
+  paymentTerm?: PaymentTermWhereUniqueInput;
+  promotions?: PromotionListRelationFilter;
+  rating?: FloatNullableFilter;
+  ratings?: RatingListRelationFilter;
+  search?: SearchWhereUniqueInput;
+  sellerClassificationId?: StringNullableFilter;
+  users?: UserWhereUniqueInput;
+};

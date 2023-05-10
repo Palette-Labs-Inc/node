@@ -1,0 +1,35 @@
+import { StringFilter } from "../../util/StringFilter";
+import { ImageListRelationFilter } from "../image/ImageListRelationFilter";
+import { BooleanFilter } from "../../util/BooleanFilter";
+import { JsonFilter } from "../../util/JsonFilter";
+import { MediaFileListRelationFilter } from "../mediaFile/MediaFileListRelationFilter";
+import { MenuItemListRelationFilter } from "./MenuItemListRelationFilter";
+import { OrderListRelationFilter } from "../order/OrderListRelationFilter";
+import { OrganizationListRelationFilter } from "../organization/OrganizationListRelationFilter";
+import { FloatFilter } from "../../util/FloatFilter";
+import { QuoteListRelationFilter } from "../quote/QuoteListRelationFilter";
+import { FloatNullableFilter } from "../../util/FloatNullableFilter";
+import { SearchListRelationFilter } from "../search/SearchListRelationFilter";
+import { SellerWhereUniqueInput } from "../seller/SellerWhereUniqueInput";
+import { DateTimeFilter } from "../../util/DateTimeFilter";
+
+export type MenuItemWhereInput = {
+  currencyCode?: StringFilter;
+  id?: StringFilter;
+  images?: ImageListRelationFilter;
+  isRateable?: BooleanFilter;
+  locationIDs?: JsonFilter;
+  mediaFile?: MediaFileListRelationFilter;
+  menuItemsSelectedModifiers?: MenuItemListRelationFilter;
+  modifierGroupIDs?: JsonFilter;
+  orders?: OrderListRelationFilter;
+  organization?: OrganizationListRelationFilter;
+  paymentModes?: JsonFilter;
+  price?: FloatFilter;
+  quotes?: QuoteListRelationFilter;
+  rating?: FloatNullableFilter;
+  searches?: SearchListRelationFilter;
+  selectedModifiers?: MenuItemListRelationFilter;
+  sellers?: SellerWhereUniqueInput;
+  timeToLive?: DateTimeFilter;
+};

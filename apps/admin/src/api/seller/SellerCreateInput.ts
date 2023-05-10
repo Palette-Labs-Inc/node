@@ -1,0 +1,33 @@
+import { BazaarCreateNestedManyWithoutSellersInput } from "./BazaarCreateNestedManyWithoutSellersInput";
+import { CategoryCreateNestedManyWithoutSellersInput } from "./CategoryCreateNestedManyWithoutSellersInput";
+import { FulfillmentSpecificationCreateNestedManyWithoutSellersInput } from "./FulfillmentSpecificationCreateNestedManyWithoutSellersInput";
+import { InputJsonValue } from "../../types";
+import { LocationCreateNestedManyWithoutSellersInput } from "./LocationCreateNestedManyWithoutSellersInput";
+import { MenuItemCreateNestedManyWithoutSellersInput } from "./MenuItemCreateNestedManyWithoutSellersInput";
+import { MenuCreateNestedManyWithoutSellersInput } from "./MenuCreateNestedManyWithoutSellersInput";
+import { ModifierGroupCreateNestedManyWithoutSellersInput } from "./ModifierGroupCreateNestedManyWithoutSellersInput";
+import { PaymentTermWhereUniqueInput } from "../paymentTerm/PaymentTermWhereUniqueInput";
+import { PromotionCreateNestedManyWithoutSellersInput } from "./PromotionCreateNestedManyWithoutSellersInput";
+import { RatingCreateNestedManyWithoutSellersInput } from "./RatingCreateNestedManyWithoutSellersInput";
+import { SearchWhereUniqueInput } from "../search/SearchWhereUniqueInput";
+import { UserWhereUniqueInput } from "../user/UserWhereUniqueInput";
+
+export type SellerCreateInput = {
+  bazaar?: BazaarCreateNestedManyWithoutSellersInput;
+  categories?: CategoryCreateNestedManyWithoutSellersInput;
+  fulfillmentSpecifications?: FulfillmentSpecificationCreateNestedManyWithoutSellersInput;
+  holidays?: InputJsonValue;
+  isRateable: boolean;
+  locations?: LocationCreateNestedManyWithoutSellersInput;
+  menuItems?: MenuItemCreateNestedManyWithoutSellersInput;
+  menus?: MenuCreateNestedManyWithoutSellersInput;
+  modifierGroups?: ModifierGroupCreateNestedManyWithoutSellersInput;
+  password?: string | null;
+  paymentTerm?: PaymentTermWhereUniqueInput | null;
+  promotions?: PromotionCreateNestedManyWithoutSellersInput;
+  rating?: number | null;
+  ratings?: RatingCreateNestedManyWithoutSellersInput;
+  search?: SearchWhereUniqueInput | null;
+  sellerClassificationId?: string | null;
+  users: UserWhereUniqueInput;
+};
