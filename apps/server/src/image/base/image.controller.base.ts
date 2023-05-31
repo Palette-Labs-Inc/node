@@ -88,7 +88,7 @@ export class ImageControllerBase {
         width: true,
       },
     });
-  }
+  } 
 
   @common.UseInterceptors(AclFilterResponseInterceptor)
   @common.Get()
