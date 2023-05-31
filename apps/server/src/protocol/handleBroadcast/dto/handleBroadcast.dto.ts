@@ -2,7 +2,7 @@ import { ObjectType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
 import { ValidateNested } from "class-validator";
 import { Type } from "class-transformer";
-import { Bazaar } from "../../../bazaar/base/Bazaar";
+import { Bazaar } from "../../../entities/bazaar/base/Bazaar";
 import { CallbackTransactionLifecycleDto } from "../../dto/callback.dto"
 
 @ObjectType()

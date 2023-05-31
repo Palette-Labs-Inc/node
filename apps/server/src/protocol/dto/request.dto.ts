@@ -5,7 +5,7 @@ import { ObjectType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
 import { ValidateNested } from "class-validator";
 import { Type } from "class-transformer";
-import { Condition } from "../../condition/base/Condition";
+import { Condition } from "../../entities/condition/base/Condition";
 
 @ObjectType()
 class RequestTransactionLifecycleDto {
